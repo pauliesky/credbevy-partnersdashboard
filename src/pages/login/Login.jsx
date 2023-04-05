@@ -11,7 +11,7 @@ import "./login.css";
 
 function Login() {
   const [user, setUser] = useState("credbevy@gmail.com");
-  const [pass, setPass] = useState("credbevy");
+  const [pass, setPass] = useState("timilehin");
 
   const [type, setType] = useState("password");
 
@@ -19,7 +19,7 @@ function Login() {
 
   const handleValidate = (e) => {
     e.preventDefault();
-    if (user === "credbevy@gmail.com" && pass === "credbevy") {
+    if (user === "credbevy@gmail.com" && pass === "timilehin") {
       navigate("/dashboard");
     } else if (user === 123456 && pass === "love") {
       navigate("/dashboard");
