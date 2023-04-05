@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 function Login() {
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
+  const [user, setUser] = useState("credbevy@gmail.com");
+  const [pass, setPass] = useState("credbevy");
 
   const [type, setType] = useState("password");
 
@@ -19,7 +19,7 @@ function Login() {
 
   const handleValidate = (e) => {
     e.preventDefault();
-    if (user === "reactjs12@gmail.com" && pass === "love") {
+    if (user === "credbevy@gmail.com" && pass === "credbevy") {
       navigate("/dashboard");
     } else if (user === 123456 && pass === "love") {
       navigate("/dashboard");
