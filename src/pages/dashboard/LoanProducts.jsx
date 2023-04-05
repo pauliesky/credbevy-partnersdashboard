@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import amigosStanding from "./img/amigosStanding.png";
+import amigos from "./img/amigos.png";
 import Checkbox1 from "./checkbox1/Checkbox1";
 
 const LoanProducts = () => {
@@ -19,7 +19,7 @@ const LoanProducts = () => {
             Loan Products
           </div>
           <img
-            src={amigosStanding}
+            src={amigos}
             alt="a person standing"
             className="mt-[183px] w-[349px] h-[346px] mx-auto"
           />
