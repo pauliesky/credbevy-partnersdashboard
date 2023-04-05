@@ -19,7 +19,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Dashboard = () => {
   const [display, setDisplay] = useState(true);
-  const [isLabelVisible, setIsLabelVisiblle] = useState(false);
+
 
   return (
     <>
