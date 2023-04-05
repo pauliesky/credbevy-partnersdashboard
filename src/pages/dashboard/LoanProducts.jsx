@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import amigos from "./img/amigos.png";
 import Checkbox1 from "./checkbox1/Checkbox1";
+import { useNavigate } from "react-router-dom";
 
 const LoanProducts = () => {
   const [showFirstDiv, setShowFirsttDiv] = useState(true);
@@ -9,7 +10,11 @@ const LoanProducts = () => {
     setShowFirsttDiv(false);
   };
 
-  // let activeStyle = {};
+  const navigate = useNavigate();
+
+  const handleViewProduct = () => {
+    navigate("./product");
+  };
 
   return (
     <div className="p">
@@ -180,7 +185,10 @@ const LoanProducts = () => {
             </form>
           </div>
           <div className="mt-8 mb-8 flex justify-end w-[867px]">
-            <button className="font-bold text-xs text-white p-2.5 bg-[#8003CD] rounded">
+            <button
+              className="font-bold text-xs text-white p-2.5 bg-[#8003CD] rounded"
+              onClick={handleViewProduct}
+            >
               Add Product
             </button>
           </div>

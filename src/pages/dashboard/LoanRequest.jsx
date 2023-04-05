@@ -9,7 +9,6 @@ import infoCircle from "./img/infoCircle.png";
 import DataTable from "react-data-table-component";
 import TripleItem1 from "./dropdown/TripleItem1";
 import TripleItem2 from "./dropdown/TripleItem2";
-import RequestDetails from "./RequestDetails";
 import closeModal from "./img/closeModal.png";
 import AcceptModal from "./modal/AcceptModal";
 import DeleteModal from "./modal/DeleteModal";

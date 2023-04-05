@@ -123,13 +123,13 @@ const RequestDetails = ({ RequestDetails }) => {
           <img src={download} alt="download icon" className="w-6 h-6" />
           <p className="text-xs font-bold">Download Request</p>
         </button>
-        <button className="flex gap-1 justify-center items-center px-2.5 py-1.5 bg-[#FA4D56] rounded">
+        <button className="flex gap-1 justify-center items-center px-2.5 py-1.5 bg-[#FA4D56] rounded border-0">
           <img src={whiteClose} alt="close icon" className="w-6 h-6" />
-          <p className="text-xs font-bold">Decline Request</p>
+          <p className="text-xs font-bold text-white">Decline Request</p>
         </button>
-        <button className="flex gap-1 justify-center items-center px-2.5 py-1.5 bg-[#42BE65] rounded">
+        <button className="flex gap-1 justify-center items-center px-2.5 py-1.5 bg-[#42BE65] rounded border-0">
           <img src={whiteCircle} alt="tick icon" className="w-6 h-6" />
-          <p className="text-xs font-bold">Accept Request</p>
+          <p className="text-xs font-bold text-white">Accept Request</p>
         </button>
         <button className=""></button>
         <button className=""></button>

@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/login/Login";
+// import Login from "./pages/login/Login";
 import Layout from "./components/shared/Layout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Wallet from "./pages/dashboard/Wallet";
 import LoanProducts from "./pages/dashboard/LoanProducts";
+import Product from "./pages/dashboard/Product";
 import LoanRequest from "./pages/dashboard/LoanRequest";
 import RequestDetails from "./pages/dashboard/RequestDetails";
 import LoanHistory from "./pages/dashboard/LoanHistory";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="wallet" element={<Wallet />} />
         <Route path="loanproducts" element={<LoanProducts />} />
+        <Route path="loanproducts/product" element={<Product />} />
         <Route path="loanrequest" element={<LoanRequest />} />
         <Route path="loanrequest/:id" element={<RequestDetails />} />
         <Route path="loanhistory" element={<LoanHistory />} />
