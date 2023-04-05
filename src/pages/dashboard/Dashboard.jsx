@@ -13,7 +13,7 @@ import Demogragph from "./img/demography.png";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import Chart from "./data/chart";
+import Chart from "./data/Chart";
 import { Label } from "recharts";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -23,12 +23,13 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className=" h-full pt-12 mx-5">
+      {/* HERO */}
+      <div className=" h-full w-[1030px] pt-12 mx-5">
         <span className="normal tracking-[-0.5px] font-[700] text-[#333333] h-[36] w-[175] text-[34px] font-[Manrope]">
           Dashboard
         </span>
-        <div className="h-[210px] overflow-hidden relative pt-2 w-[1137px] mt-8 bg-[#8003CD] rounded-[8px]">
-          <div className=" absolute left-[60rem] top-[5rem]">
+        <div className="h-[210px] overflow-hidden relative pt-2 w-[1030px] mt-8 bg-[#8003CD] rounded-[8px]">
+          <div className=" absolute left-[55rem] top-[6rem]">
             {display ? (
               <VisibilityIcon
                 onClick={() => {
@@ -45,9 +46,9 @@ const Dashboard = () => {
               />
             )}
           </div>
-          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]   left-[63rem] top-[4rem] "></div>
-          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]  left-[45rem] bottom-[8rem]"></div>
-
+          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]   left-[55rem] top-[4rem] "></div>
+          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]  left-[40rem] bottom-[8rem]"></div>
+          {/* SECTION-1 */}
           <div className="container mt-8 ml-10 w-[280px] h-[140px]">
             <div className=" text-[#FFFFFF] tracking-[-0.5px]  text-[14px] h-[24] w-[94]  font-[700] font-[Manrope]">
               Wallet Balance
@@ -59,7 +60,7 @@ const Dashboard = () => {
               <span className="w-[251] h-[36] font-[700] text-[#FFFFFF] text-[34px] font-[Manrope]">
                 {display
                   ? `${430 + "," + 434 + "," + 684.54}`
-                  : "XXX,XXX,XXX,X.X"}
+                  : "XXX,XXX,XXX,XX"}
               </span>
             </span>
             <button className="bg-white h-[32] mt-[25px] w-[92] hover:cursor-pointer rounded-[4px] flex flex-row justify-center gap-1 py-[8px] px-[10px] font-[Manrope] text-[13px] font-[700] text-center text-[#333333] tracking-[-0.5px] ">
@@ -67,7 +68,7 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
-        <div className=" pl-2 container mt-[24px] flex flex-row gap-[10px] w-[1137px]">
+        <div className=" pl-2 container mt-[24px] flex flex-row gap-[10px] w-[1020px]">
           <div className="container relative w-[363px] h-[163px] rounded-[8px] py-[26px] px-[24px] border-[1px] border-solid border-[#E5EAEF] ">
             <div className="bg-[#F7EBFF] flex justify-center items-center h-[33px] w-[33px] rounded-full">
               <UilUser size="15" color="#8003CD" />
@@ -78,16 +79,16 @@ const Dashboard = () => {
             <div className="font-[Manrope] h-[36px] mt-[-8px] text-[#333333] font-[700] text-[30px]">
               200,000
             </div>
-            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[18rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
+            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[16rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
               <div className="pb-[2px]">
                 <OutboundRoundedIcon
                   style={{
                     fontSize: "9px",
-                    color: " #42BE65",
+                    color: "#42BE65",
                   }}
                 />
               </div>
-              <div className="text-[#42BE65] text-[8px] font-[Manrope] ">
+              <div className="text-[#42BE65] text-[8px] font-[Manrope]">
                 5,18%
               </div>
             </div>
@@ -109,12 +110,12 @@ const Dashboard = () => {
             <div className="font-[Manrope] h-[36px] mt-[-8px] text-[#333333] font-[700] text-[30px]">
               172
             </div>
-            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[18rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
+            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[16rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
               <div className="pb-[2px]">
                 <OutboundRoundedIcon
                   style={{
                     fontSize: "9px",
-                    color: " #42BE65",
+                    color: "#42BE65",
                   }}
                 />
               </div>
@@ -133,12 +134,12 @@ const Dashboard = () => {
             <div className="font-[Manrope] h-[36px] mt-[-8px] text-[#333333] font-[700] text-[30px]">
               20,000,000
             </div>
-            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[18rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
+            <div className="flex flex-row h-[19px] gap-[5px] px-[8px] py-[4px] w-[53px] rounded-[10px] items-center justify-evenly left-[16rem] bottom-[1.5rem] absolute bg-[#EDFCF1]">
               <div className="pb-[2px]">
                 <OutboundRoundedIcon
                   style={{
                     fontSize: "9px",
-                    color: " #42BE65",
+                    color: "#42BE65",
                   }}
                 />
               </div>
@@ -148,10 +149,12 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-evenly mt-[24px]">
+
+        {/* SECTION-2 */}
+        <div className="flex flex-row mx-[8px]justify-evenly gap-[1rem] mt-[24px]">
           <div className="w-[665px] h-[328px]  border-[1px] border-solid border-[#E5EAEF] rounded-[8px] ">
-            <div className=" flex gap-[24rem] px-[16px] py-[20px] ">
-              <div className="font-[manrope] font-[700]  text-[18px] text-[#333333]">
+            <div className=" flex gap-[20rem] px-[16px] py-[20px] ">
+              <div className="font-[manrope] font-[700]  text-[18px]  text-[#333333]">
                 Loan Income
               </div>
               <div className="flex flex-row justify-center items-center h-[38px] w-[134px] rounded-[5px] bg-[#F2F3F4] ">
@@ -164,7 +167,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className=" flex flex-col items-center  w-[448px] h-[328px] border-[1px] rounded-[8px] border-solid border-[#E5EAEF] ">
-            <div className=" flex gap-[14rem] px-[16px] py-[20px] ">
+            <div className=" flex gap-[12rem] px-[16px] py-[20px] ">
               <div className="font-[manrope] font-[700]  text-[18px] text-[#333333]">
                 Conversion Rate
               </div>
@@ -182,19 +185,18 @@ const Dashboard = () => {
               <CircularProgressbarWithChildren
                 text="47%"
                 value={67}
-                // className="z-0"
                 styles={buildStyles({
                   rotation: 0,
                   strokeLinecap: "round",
                   textSize: "15px",
                   pathTransitionDuration: 0.5,
-                  pathColor: ` #8003CD`,
+                  pathColor: "#8003CD",
                   textColor: " #FFFFFF",
                   trailColor: "#F5E6FF",
                   fill: "#8003CD",
                 })}
               >
-                <div className=" -z-10  w-[86px] h-[86px] bg-[#8003CD] rounded-full"></div>
+                <div className="-z-10  w-[86px] h-[86px] bg-[#8003CD] rounded-full"></div>
               </CircularProgressbarWithChildren>
             </div>
           </div>

@@ -22,7 +22,7 @@ function Header() {
 
       <div className="flex gap-2 ml-2">
         <img src={company} alt="company logo" className="w-7 h-7" />
-        <div className="">
+        <div>
           <p className="font-bold text-[10px]">Company Name</p>
           <p className="font-semibold text-[8px] text-[#A1A6B0]">
             Companyname@gmail.com
