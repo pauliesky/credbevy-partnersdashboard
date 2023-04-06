@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/login/Login";
+// import Login from "./pages/login/Login";
 import Layout from "./components/shared/Layout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Wallet from "./pages/dashboard/Wallet";
@@ -15,7 +15,7 @@ function App() {
   return (
     // <Router>
     <Routes>
-      <Route exact path="/" element={<Login />} />
+      {/* <Route exact path="/" element={<Login />} /> */}
       <Route path="/" element={<Layout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="wallet" element={<Wallet />} />
