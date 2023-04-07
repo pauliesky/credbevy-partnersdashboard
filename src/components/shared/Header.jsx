@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import searchNormal from "./img/searchNormal.png";
 import notification from "./img/notification.png";
 import setting from "./img/setting.png";
-import redlogin from "./img/redlogin.png";
+import redLogin from "./img/redLogin.png";
 import company from "./img/company.png";
 
 function Header() {
@@ -82,7 +82,7 @@ function Header() {
               <p className="text-sm font-semibold text-[#8A8B9F]">Setting</p>
             </button>
             <button className="flex flex-nowrap items-center justify-center gap-2">
-              <img src={redlogin} alt="notification" className="w-6 h-6" />
+              <img src={redLogin} alt="notification" className="w-6 h-6" />
               <p className="text-sm font-semibold text-[#FA4D56]">Logout</p>
             </button>
           </div>
