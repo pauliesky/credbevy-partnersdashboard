@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import eye from "../../login/eye.png";
+import eye from "../../login/img/eye.png";
 import download from "../../dashboard/img/download.png";
 
 export default function Dropdown({ onClick1 }) {

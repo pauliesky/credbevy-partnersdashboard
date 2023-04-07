@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import arrowDown from "./img/arrowDown.png";
 import requestImg from "./img/requestImg.png";
-import eye from "../login/eye.png";
-import tickCircle from "./img/tickCircle.png";
+import eye from "../login/img/eye.png";
 import closeCircle from "./img/closeCircle.png";
 import download from "./img/download.png";
 import infoCircle from "./img/infoCircle.png";

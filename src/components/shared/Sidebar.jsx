@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import credbevyLogo from "../../pages/login/credbevyLogo.png";
+import credbevyLogo from "../../pages/login/img/credbevyLogo.png";
 import category from "./img/category.png";
 import emptyWallet from "./img/emptyWallet.png";
 import chart from "./img/chart.png";

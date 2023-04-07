@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import closeCircle from "./img/closeCircle.png";
 import tickCircle from "./img/tickCircle.png";
 import requestImg from "./img/requestImg.png";
-import eye from "./../login/eye.png";
+import eye from "./../login/img/eye.png";
 import download from "./img/download.png";
 import purpleTick from "./img/purpleTick.png";
 import infoCircle from "./img/infoCircle.png";
