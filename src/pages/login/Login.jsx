@@ -1,97 +1,98 @@
 import React, { useState } from "react";
-import credbevyLogo from "./credbevyLogo.png";
-import eye from "./eye.png";
-import eyeSlash from "./eyeSlash.png";
+import credbevyLogo from "./img/credbevyLogo.png";
+import eye from "./img/eye.png";
+import eyeSlash from "./img/eyeSlash.png";
 import { useNavigate } from "react-router-dom";
-// import Icon from "react-icons-kit";
-// import { basic_eye } from "react-icons-kit/linea/basic_eye";
-// import { basic_eye_closed } from "react-icons-kit/linea/basic_eye_closed";
-// import { SecurityIconClose } from "../icons/Icon";
-import "./login.css";
 
-function Login() {
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
+export default function Login() {
+  const [user, setUser] = useState("credbevy@gmail.com");
+  const [pass, setPass] = useState("credbevy");
 
   const [type, setType] = useState("password");
 
   const navigate = useNavigate();
 
   const handleValidate = (e) => {
-    e.preventDefault();
-    if (user === "reactjs12@gmail.com" && pass === "love") {
-      navigate("/dashboard");
-    } else if (user === 123456 && pass === "love") {
-      navigate("/dashboard");
-    } else {
-      alert("Wrong Credentials, please try again");
-    }
+    navigate("/dashboard");
   };
 
   return (
-    <div className="login">
+    <div className="">
       <div className="relative container mx-auto p-6 mt-6">
         <img
           src={credbevyLogo}
           alt="credbevy logo"
-          className="absolute credbevy-logo"
+          className="w-[184px] h-[34px]"
         />
       </div>
-      <div className="top"></div>
-      <div className="container mx-auto flex flex-col justify-center items-center gap-3">
-        <div className="text-2xl font-bold leading-6 tracking-[-0.5px] text-center">
-          Login
+
+      <form
+        action=""
+        className="mt-[100px] flex flex-col justify-center items-center"
+        onSubmit={handleValidate}
+      >
+        <h1 className="font-bold text-2xl text-center">Login</h1>
+        <div className="relative">
+          <input
+            id="email"
+            name="email"
+            type="text"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            className="peer placeholder-transparent mt-[52px] p-3 border border-[#adb5bd] rounded-[5px] w-[350px] h-[60px] outline-none"
+            placeholder="email"
+          />
+          <label
+            htmlFor="email"
+            className="absolute font-semibold text-xs left-3 top-[56px] peer-placeholder-shown:text-sm peer-placeholder-shown:top-[71px]  peer-focus:top-[56px] peer-focus:text-xs"
+          >
+            Email/Phone Number
+          </label>
         </div>
-        <form onSubmit={handleValidate} className="login-form mt-3">
-          <div className="user">
-            <input
-              type="email"
-              value={user}
-              className="p-3"
-              onChange={(e) => setUser(e.target.value)}
-            />
-            <label htmlFor="" className="form-label">
-              Email/Phone number
-            </label>
-          </div>
-          <div className="user mt-3.5 flex">
-            <input
-              type={type}
-              value={pass}
-              className="p-3"
-              onChange={(e) => setPass(e.target.value)}
-            />
-            {type === "password" ? (
-              <span className="icon-span" onClick={() => setType("text")}>
-                {/* <Icon icon={basic_eye_closed} size={22} /> */}
-                <img src={eyeSlash} alt="security" />
-              </span>
-            ) : (
-              <span className="icon-span" onClick={() => setType("password")}>
-                {/* <Icon icon={basic_eye} size={22} /> */}
-                <img src={eye} alt="security" />
-              </span>
-            )}
-            <label htmlFor="" className="form-label">
-              Password
-            </label>
-          </div>
-          <div className="flex justify-center items-center mt-10">
-            <button
-              style={{
-                background:
-                  "linear-gradient(90deg, #8003cd 1.22%, #5c00fe 100%)",
-              }}
-              className="login-button flex justify-center items-center"
-              type="submit"
+        <div className="relative">
+          <input
+            id="password"
+            name="password"
+            type={type}
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            className="peer placeholder-transparent mt-6 p-3 border border-[#adb5bd] rounded-[5px] w-[350px] h-[60px] outline-none"
+            placeholder="password"
+          />
+          {type === "password" ? (
+            <span
+              className="absolute top-[42px] left-[306px] cursor-pointer"
+              onClick={() => setType("text")}
             >
-              <p>Login</p>
-            </button>
-          </div>
-        </form>
-      </div>
+              <img src={eyeSlash} alt="security" />
+            </span>
+          ) : (
+            <span
+              className="absolute top-[42px] left-[306px] cursor-pointer"
+              onClick={() => setType("password")}
+            >
+              <img src={eye} alt="security" />
+            </span>
+          )}
+          <label
+            htmlFor="password"
+            className="absolute font-semibold text-xs left-3 top-[27px] peer-placeholder-shown:text-sm peer-placeholder-shown:top-[43px] peer-focus:top-[27px] peer-focus:text-xs"
+          >
+            Password
+          </label>
+        </div>
+        <div className="flex justify-center items-center mt-10">
+          <button
+            style={{
+              background: "linear-gradient(90deg, #8003cd 1.22%, #5c00fe 100%)",
+            }}
+            className="flex justify-center items-center text-white w-[327px] h-[58px] px-[160px] py-[21px]"
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
-
-export default Login;

@@ -6,7 +6,117 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+body {
+  /* margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+  font-family: "Manrope", sans-serif;
+}
+
 .credbevy-logo {
   width: 183px;
   height: 34px;
 }
+
+.major-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.major-tab-list {
+  display: flex;
+  gap: 70px;
+  color: #8a8b9f;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.major-tab {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.details-tab-list {
+  display: flex;
+  padding: 24px;
+  margin: 0;
+  border-bottom: 1px solid #e5eaef;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #8a8b9f;
+  justify-content: space-between;
+}
+
+.details-tab {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.settings-tab-list {
+  display: flex;
+  justify-content: space-between;
+  color: #8a8b9f;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.notification-tab-list {
+  display: flex;
+  justify-content: space-between;
+  color: #8a8b9f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.react-tabs__tab--selected {
+  color: #8003cd;
+  font-weight: 700;
+  outline: none;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+/* .react-tabs__tab:focus {
+  outline: none;
+} */
+
+/* .react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+} */
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+/* .tab {
+  cursor: pointer;
+}
+
+.active-tab {
+  color: #8003cd;
+  font-weight: 700;
+} */
