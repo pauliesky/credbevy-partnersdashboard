@@ -23,12 +23,9 @@ const NotifyModal = ({ setNotifyModalOn }) => {
             <div className="bg-white w-[477px] h-[580px] px-8 pt-6">
               <div className="container flex items-center justify-center justify-between">
                 <p className="font-bold text-base">Notification</p>
-                <img
-                  src={closeModal}
-                  alt="close icon"
-                  className="w-8 h-8"
-                  onClick={handleCancelClick}
-                />
+                <button className="" onClick={handleCancelClick}>
+                  <img src={closeModal} alt="close icon" className="w-8 h-8" />
+                </button>
               </div>
               <div className="mt-[29px]">
                 <Tabs>
