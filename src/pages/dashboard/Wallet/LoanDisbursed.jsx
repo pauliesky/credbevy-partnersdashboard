@@ -225,7 +225,7 @@ const customStyles = {
   },
 };
 
-function LoanDisbursed({ onNext, onTab }) {
+function LoanDisbursed({  onTab }) {
   return (
     <>
       <WalletHeader page={2} onNext={(value) => onTab(value)} />

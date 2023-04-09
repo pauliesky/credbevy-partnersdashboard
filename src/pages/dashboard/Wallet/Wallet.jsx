@@ -7,9 +7,6 @@ import { useState } from "react";
 import LoanDisbursed from "./LoanDisbursed";
 
 
-
-
-
 const Wallet = () => {
   const [page, setPage] = useState(0);
   return (

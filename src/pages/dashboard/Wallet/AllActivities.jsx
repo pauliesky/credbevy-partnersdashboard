@@ -110,8 +110,7 @@ const data = [
           className="flex items-center text-[14px] font-[Manrope] font-[600]
         leading-[24px] tracking-[-0.5px]  text-[#333333]"
         >
-          {" "}
-          Wallet top-up
+          {" Wallet top-up"}
         </div>
       </div>
     ),
@@ -228,10 +227,10 @@ const customStyles = {
   },
 };
 
-function AllActivities({ onNext, onTab }) {
+function AllActivities({ onTab }) {
   return (
     <>
-      <WalletHeader page={0} onNext={(value) => onTab(value)} />
+      <WalletHeader page={0} onNext = {(value) => onTab(value)} />
       <DataTable columns={columns} data={data} customStyles={customStyles} />
     </>
   );

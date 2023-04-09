@@ -225,7 +225,7 @@ const customStyles = {
   },
 };
 
-function WalletTopUp({ onNext, onTab }) {
+function WalletTopUp({  onTab }) {
   return (
     <>
       <WalletHeader page={1} onNext={(value) => onTab(value)} />
