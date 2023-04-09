@@ -1,7 +1,7 @@
 import React from "react";
 import DataTable from "react-data-table-component";
 import wallet from "../img/walletTopupImg.png";
-import transfer from "../img/transfer.png";
+import transfer from "../img/Transfer.png";
 import WalletHeader from "./WalletHeader";
 
 const columns = [
