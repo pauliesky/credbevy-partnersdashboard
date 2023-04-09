@@ -1,13 +1,10 @@
 import React from "react";
-import AddIcon from "@mui/icons-material/Add";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import DashboardHero from "./DashboardHero";
 import { UilUser } from "@iconscout/react-unicons";
 import OutboundRoundedIcon from "@mui/icons-material/OutboundRounded";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import { PieChart } from "react-minimal-pie-chart";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import { useState } from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import Demogragph from "./img/demography.png";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -16,58 +13,17 @@ import "react-circular-progressbar/dist/styles.css";
 import Chart from "./data/Chart";
 import { Label } from "recharts";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Naira from "react-naira";
 
 const Dashboard = () => {
-  const [display, setDisplay] = useState(true);
-
-
   return (
     <>
-      {/* HERO */}
+      {/* HEADING */}
       <div className=" h-full w-[1030px] pt-12 mx-5">
         <span className="normal tracking-[-0.5px] font-[700] text-[#333333] h-[36] w-[175] text-[34px] font-[Manrope]">
           Dashboard
         </span>
-        <div className="h-[210px] overflow-hidden relative pt-2 w-[1030px] mt-8 bg-[#8003CD] rounded-[8px]">
-          <div className=" absolute left-[55rem] top-[6rem]">
-            {display ? (
-              <VisibilityIcon
-                onClick={() => {
-                  setDisplay(!display);
-                }}
-                style={{ color: "white", cursor: "pointer" }}
-              />
-            ) : (
-              <VisibilityOffIcon
-                onClick={() => {
-                  setDisplay(!display);
-                }}
-                style={{ color: "white", cursor: "pointer" }}
-              />
-            )}
-          </div>
-          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]   left-[55rem] top-[4rem] "></div>
-          <div className="w-[252px]  h-[252px] rounded-full absolute bg-[#9C1AEB]  left-[40rem] bottom-[8rem]"></div>
-          {/* SECTION-1 */}
-          <div className="container mt-8 ml-10 w-[280px] h-[140px]">
-            <div className=" text-[#FFFFFF] tracking-[-0.5px]  text-[14px] h-[24] w-[94]  font-[700] font-[Manrope]">
-              Wallet Balance
-            </div>
-            <span className=" mt-1 flex gap-2">
-              <span className="w-[251] h-[36] font-[700] text-[#FFFFFF] text-[34px] font-[Manrope]">
-                &#8358;
-              </span>
-              <span className="w-[251] h-[36] font-[700] text-[#FFFFFF] text-[34px] font-[Manrope]">
-                {display
-                  ? `${430 + "," + 434 + "," + 684.54}`
-                  : "XXX,XXX,XXX,XX"}
-              </span>
-            </span>
-            <button className="bg-white h-[32] mt-[25px] w-[92] hover:cursor-pointer rounded-[4px] flex flex-row justify-center gap-1 py-[8px] px-[10px] font-[Manrope] text-[13px] font-[700] text-center text-[#333333] tracking-[-0.5px] ">
-              <AddIcon style={{ fontSize: "20px" }} /> Fund Wallet
-            </button>
-          </div>
-        </div>
+        <DashboardHero />
         <div className=" pl-2 container mt-[24px] flex flex-row gap-[10px] w-[1020px]">
           <div className="container relative w-[363px] h-[163px] rounded-[8px] py-[26px] px-[24px] border-[1px] border-solid border-[#E5EAEF] ">
             <div className="bg-[#F7EBFF] flex justify-center items-center h-[33px] w-[33px] rounded-full">
@@ -143,7 +99,7 @@ const Dashboard = () => {
                   }}
                 />
               </div>
-              <div className="text-[#42BE65] text-[8px] font-[Manrope] ">
+              <div className="text-[#42BE65]  text-[8px] font-[Manrope] ">
                 5,18%
               </div>
             </div>
@@ -178,7 +134,6 @@ const Dashboard = () => {
                     color: "#F2F3F4",
                   }}
                 />
-                ;
               </div>
             </div>
             <div style={{ width: "194px", height: "194px" }}>
@@ -215,7 +170,6 @@ const Dashboard = () => {
                     color: " #F2F3F4",
                   }}
                 />
-                ;
               </div>
             </div>
             <div className=" h-[172px] w-[100%] justify-center">
@@ -311,6 +265,7 @@ const Dashboard = () => {
                 width="245px"
                 borderRadius="72px"
                 labelColor="#02A0FC"
+                // isLabelVisible
               />
             </div>
             <div className="">
@@ -345,7 +300,6 @@ const Dashboard = () => {
                     color: " #F2F3F4",
                   }}
                 />
-                ;
               </div>
             </div>
 

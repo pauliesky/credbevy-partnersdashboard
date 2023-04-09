@@ -1,0 +1,94 @@
+.rdt_Table .rdt_TableCol {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #8a8b9f;
+  letter-spacing: -0.5px;
+  padding: 0px;
+ 
+  max-width: 110px;
+}
+[data-column-id="description"].rdt_TableCol {
+  padding-left: 32px;
+}
+[data-column-id="amount"].rdt_TableCol {
+  margin-left: 162px;
+}
+
+[data-column-id="date"].rdt_TableCol {
+  margin-left: 121px;
+}
+[data-column-id="status"].rdt_TableCol {
+  margin-left: 120px;
+}
+
+/* LOAN DISBURSED */
+[data-column-id="disbursed__amount"].rdt_TableCol {
+  margin-left: 0px;
+}
+[data-column-id="cs"].rdt_TableCol {
+  margin-left: 149px;
+}
+[data-column-id="disbursed__date"].rdt_TableCol {
+  margin-left: 8px;
+}
+
+.rdt_TableRow:first-child {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  padding: 0px 0px 0px 32px;
+  background: #f6f6f6;
+  border: 1px solid #e5eaef;
+  border-top: none;
+}
+.rdt_TableRow:nth-child(2) {
+  border: 1px solid #e5eaef;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  padding: 0px 0px 0px 32px;
+  background: #ffffff;
+  border-top: none;
+}
+.rdt_TableRow:nth-child(3) {
+  border: 1px solid #e5eaef;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  padding: 0px 0px 0px 32px;
+  background: #f6f6f6;
+  border-top: none;
+}
+.rdt_TableRow:nth-child(4) {
+  border: 1px solid #e5eaef;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  padding: 0px 0px 0px 32px;
+  background: #ffffff;
+  border-top: none;
+}
+.rdt_TableRow:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 73px;
+  padding: 0px 0px 0px 32px;
+  background: #f6f6f6;
+  border: 1px solid #e5eaef;
+  border-top: none;
+  border-radius: 0px 0px 4px 4px;
+}

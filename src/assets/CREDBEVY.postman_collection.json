@@ -1,0 +1,2724 @@
+{
+	"info": {
+		"_postman_id": "065aa4c9-9786-461d-b148-05dd08e71417",
+		"name": "CREDBEVY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12995712"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Create Account",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "telephone",
+											"value": "07055070140",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "fola.aremu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "folakunmi.aremu",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "folakunmi.aremu",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/register",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "emmerich.clifford@example.com",
+											"description": "You can send the phone number here too",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resend OTP",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/otp/resend",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"otp",
+										"resend"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify OTP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/otp/verify",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"otp",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Transaction Pin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "transaction_pin",
+											"value": "15462",
+											"type": "text"
+										},
+										{
+											"key": "transaction_pin_confirmation",
+											"value": "15462",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transaction-pin/set",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transaction-pin",
+										"set"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Transaction Pin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "transaction_pin",
+											"value": "15462",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transaction-pin/verify",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transaction-pin",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/refresh",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/me",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/logout",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/forgotPassword?email=glennie.botsford@example.com",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"forgotPassword"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "glennie.botsford@example.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password from Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/passwordReset?email=glennie.botsford%40example.net&token=f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e&password=folakunmi.aremuanew&password_confirmation=folakunmi.aremuanew",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"passwordReset"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "glennie.botsford%40example.net"
+										},
+										{
+											"key": "token",
+											"value": "f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e"
+										},
+										{
+											"key": "password",
+											"value": "folakunmi.aremuanew"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "folakunmi.aremuanew"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "KYC",
+					"item": [
+						{
+							"name": "BVN Verification",
+							"item": [
+								{
+									"name": "Initiate BVN Verification",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "bvn",
+													"value": "22197575534",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/user/kyc/initiate/bvn",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"kyc",
+												"initiate",
+												"bvn"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Send BVN Verification OTP",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "bvn",
+													"value": "1234567775",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "",
+													"description": "to be gotten from previous endpoint",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/user/kyc/send/otp",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"kyc",
+												"send",
+												"otp"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Verify BVN",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "bvn",
+													"value": "1234567775",
+													"type": "text"
+												},
+												{
+													"key": "otp",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/user/kyc/fetch/bvn/deff2771-6639-4c2a-8e50-4099e0777e64",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"kyc",
+												"fetch",
+												"bvn",
+												"deff2771-6639-4c2a-8e50-4099e0777e64"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Update Persornal Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "education_level",
+											"value": "starters",
+											"type": "text"
+										},
+										{
+											"key": "marital_status",
+											"value": "married",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/personal-information/da9917b3-1b8d-466a-9b7c-f1ffd549b6a1",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"personal-information",
+										"da9917b3-1b8d-466a-9b7c-f1ffd549b6a1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Address Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "address",
+											"value": "Llagos",
+											"type": "text"
+										},
+										{
+											"key": "state",
+											"value": "Lagos",
+											"type": "text"
+										},
+										{
+											"key": "lga",
+											"value": "Nigeria",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/address-information/da9917b3-1b8d-466a-9b7c-f1ffd549b6a1",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"address-information",
+										"da9917b3-1b8d-466a-9b7c-f1ffd549b6a1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Bank Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bank_code",
+											"value": "044",
+											"type": "text"
+										},
+										{
+											"key": "account_number",
+											"value": "1234567891",
+											"type": "text"
+										},
+										{
+											"key": "bank_account_phone_number",
+											"value": "08987472834",
+											"type": "text"
+										},
+										{
+											"key": "bvn",
+											"value": "22197575534",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/bank-information/deff2771-6639-4c2a-8e50-4099e0777e64",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"bank-information",
+										"deff2771-6639-4c2a-8e50-4099e0777e64"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Next of Kin Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "next_of_kin_firstname",
+											"value": "James",
+											"type": "text"
+										},
+										{
+											"key": "next_of_kin_lastname",
+											"value": "Ajala",
+											"type": "text"
+										},
+										{
+											"key": "next_of_kin_relationship",
+											"value": "Brother",
+											"type": "text"
+										},
+										{
+											"key": "next_of_kin_telephone",
+											"value": "82917381239",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/next-of-kin-information/da9917b3-1b8d-466a-9b7c-f1ffd549b6a1",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"next-of-kin-information",
+										"da9917b3-1b8d-466a-9b7c-f1ffd549b6a1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Businesss Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "business_name",
+											"value": "daddy yo",
+											"type": "text"
+										},
+										{
+											"key": "business_address",
+											"value": "123454kdfhdld fvhdfbvdfv",
+											"type": "text"
+										},
+										{
+											"key": "business_email",
+											"value": "fola.ajdh@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "job_role",
+											"value": "developer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/business-information/da9917b3-1b8d-466a-9b7c-f1ffd549b6a1",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"business-information",
+										"da9917b3-1b8d-466a-9b7c-f1ffd549b6a1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Proof of Identity Information",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"documents\":[\n        {\n            \"file\":\"file1\"\n        },\n        {\n            \"file\":\"file2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/proof-of-identity-information",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"proof-of-identity-information"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Single Documrnt",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "document",
+											"type": "file",
+											"src": "/Users/folakunmiaremu/Downloads/1609080634763 (1).jpeg"
+										},
+										{
+											"key": "category",
+											"value": "2",
+											"description": "if ($this->category == 1) {\n return \"KYC/Proof Of Address\";\n}\nif ($this->category == 2) {\n  return \"Proof of Identity\";\n}\nif ($this->category == 3) {\n  return \"Selfie\";\n}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/kyc/document/upload/da9917b3-1b8d-466a-9b7c-f1ffd549b6a1",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"kyc",
+										"document",
+										"upload",
+										"da9917b3-1b8d-466a-9b7c-f1ffd549b6a1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transfers",
+					"item": [
+						{
+							"name": "Generate Virtual Account Details",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user/generate-payment-account-details",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"generate-payment-account-details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Beneficiary",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bankcode",
+											"value": "058",
+											"type": "text"
+										},
+										{
+											"key": "accountnumber",
+											"value": "0167457616",
+											"type": "text"
+										},
+										{
+											"key": "nick_name",
+											"value": "bobo",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"description": "1 - bank account\n2 - CredBevy account",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transfer/beneficiary/add",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transfer",
+										"beneficiary",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Beneficiary",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transfer/beneficiary/list?search_text&page_size",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transfer",
+										"beneficiary",
+										"list"
+									],
+									"query": [
+										{
+											"key": "search_text",
+											"value": null
+										},
+										{
+											"key": "page_size",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Withdraw/Transfer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "amount",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "bank_code",
+											"value": "058",
+											"type": "text"
+										},
+										{
+											"key": "account_number",
+											"value": "0167457616",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transfer/withdraw",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transfer",
+										"withdraw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Transactions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/transfer/transactions?transaction_type&page_size&start&end",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"transfer",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "transaction_type",
+											"value": null,
+											"description": "nullabl\n1 - debit\n2- credit\n"
+										},
+										{
+											"key": "page_size",
+											"value": null
+										},
+										{
+											"key": "start",
+											"value": null,
+											"description": "nullable\nY-m-d"
+										},
+										{
+											"key": "end",
+											"value": null,
+											"description": "nullable\nY-m-d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJpc3MiOiJodHRwOi8vY3JlZGJldnktZW52LmViYS1uc2ZwNDNjYy51cy1lYXN0LTEuZWxhc3RpY2JlYW5zdGFsay5jb20vYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE2NzczMDk5NDcsImV4cCI6MTY3NzM5NjM0NywibmJmIjoxNjc3MzA5OTQ3LCJqdGkiOiI2dHJ1OFBIdmxRM0lqQ1k3Iiwic3ViIjoiNiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.y8PHh7p2rvH4HJ13kX2--y3nLxWqPD3iZRon5Ew9WFPj01OH_fhvDQKxbFwLgEnYM4Znnph536-YDCiqtf7J7zBHjzWz34yNApEp8ZVPLkRjIAYzcEIgpM5cZ-9DR_OocpACLCXr6PWfG460bOd0G5pN0M1X45-Fb0r3Udf30UmQfgnvRwAjmBLivSrtVwImr3Oh-HYfJfNwiKT0cCr0Y8CyEb7uYfHw3T0-mYGzV63wJkLIMc2UF9FpdFzVo8PPDuyW97eiaPUcl3T0YeNd-mtuvhMVraHjblBpBuQ2CgNQgNyvUy97jA_ZA_zQpgJDDS06GZUYXPEdf3XDb5zUk3VcKPsOtoHfKMjmPk0P9S8a_H9svY8xBQ13_9SfAI9F8VgGBLvlGnFwoDekfNZhd0x6VTpUIu-m-n5231kCySyebMNaBXdDcSP8av1HuH_GdOhFAo5C4YIQY6FsRN5fnrjjYOk8QFqCfK2w9TUwHHQ0A2NG-x5PBQNMTTgAN1SZZvDiLphNe9T2JGFIrXirhxDP5AzeIJG97dNTED_vvbumJwDZBJRQpaW2pBkdrmso341o7LaVehO_gl_0pa5LTjLF9-DJ6p15ykXfRODhBvBVVZ0S2Fx3hI6PuanLE8-i2Rk9zZb2byQb_TlVMsoAjM5hJwUMpAO_7TGVhjC0CLM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Partner",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "User Management",
+							"item": [
+								{
+									"name": "Create Partner User Account",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"1234567\",\n    \"first_name\": \"James\",\n    \"last_name\": \"OJ\",\n    \"password\": \"123456\",\n    \"password_confirmation\": \"123456\",\n    \"roles\":[\n        \"agent\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/account/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"account",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Partner User Account",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"12\",\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"1234567\",\n    \"first_name\": \"James\",\n    \"last_name\": \"OJ\",\n    \"password\": \"123456\",\n    \"password_confirmation\": \"123456\",\n    \"roles\": [\n        \"agent\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/account/edit",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"account",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List Partner User Account",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "search_text",
+													"value": "1234567",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/partner/account/list",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"account",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "One Partner User Account",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "search_text",
+													"value": "1234567",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/account/576e0b55-b84d-4eb2-a07c-8c58ba4c639b",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"account",
+												"576e0b55-b84d-4eb2-a07c-8c58ba4c639b"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Roles and Permissions",
+							"item": [
+								{
+									"name": "Create Permissions",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"permissions\":[\n        \"list-all-campaign\",\n        \"add-user\",\n        \"edit-user\",\n        \"create-teams\",\n        \"set-out-of-office\",\n        \"team-management\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/permission/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"permission",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Roles",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"roles\":[\n        \"agent\",\n        \"team_lead\",\n        \"supervisor\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/role/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"role",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List All Roles",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/roles",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List All Permissions",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/permissions",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"permissions"
+											],
+											"query": [
+												{
+													"key": "role",
+													"value": "supervisor",
+													"description": "nullable\nstring",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Permissions to Role",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"permissions\":[\n        \"edit-user\",\n        \"create-teams\",\n        \"set-out-of-office\",\n        \"team-management\"\n    ],\n    \"role\":\"supervisor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/permissions/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"permissions",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Role to User",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"rebekah.halvorson@hotmail.com\",\n    \"role\":[\"agent\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/role/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"role",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Permissions to User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"fola.aremu@gmail.com\",\n    \"permissions\":[\n        \"one\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/partner/permission/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"partner",
+												"permission",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "gottlieb.percival@hotmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/login",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set Transaction Pin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "transaction_pin",
+											"value": "15462",
+											"type": "text"
+										},
+										{
+											"key": "transaction_pin_confirmation",
+											"value": "15462",
+											"type": "text"
+										},
+										{
+											"key": "p",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/transaction-pin/set",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"transaction-pin",
+										"set"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Transaction Pin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "transaction_pin",
+											"value": "15462",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/transaction-pin/verify",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"transaction-pin",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Current Logged In User",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/me",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/refresh",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/forgotPassword?email=rebekah.halvorson@hotmail.com",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"forgotPassword"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "rebekah.halvorson@hotmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password from Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/passwordReset?email=glennie.botsford%40example.net&token=f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e&password=folakunmi.aremuanew&password_confirmation=folakunmi.aremuanew",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"passwordReset"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "glennie.botsford%40example.net"
+										},
+										{
+											"key": "token",
+											"value": "f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e"
+										},
+										{
+											"key": "password",
+											"value": "folakunmi.aremuanew"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "folakunmi.aremuanew"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJpc3MiOiJodHRwOi8vY3JlZGJldnktZW52LmViYS1uc2ZwNDNjYy51cy1lYXN0LTEuZWxhc3RpY2JlYW5zdGFsay5jb20vYXBpL3BhcnRuZXIvbG9naW4iLCJpYXQiOjE2NzczMDk2ODAsImV4cCI6MTY3NzM5NjA4MCwibmJmIjoxNjc3MzA5NjgwLCJqdGkiOiJQUXpvRkYwbWljcHY4RldHIiwic3ViIjoiMSIsInBydiI6IjY1ZmJlNzAyM2JmY2FiODE2Njc5ODVlZWE4MzA4OTZjYzQ4MWNlYjYifQ.1nSqcXfmW-r_JI5bdFpemRlx9_5heJGmCHT55bxxPDB-X660sMXFlMsSZdUZu49_UTFyvzespLYRPp7aGHOXP0BKuJN0juluo2I8sKjOx6sXPIfaOOx2SLDfe8gx5uGua_gz-n1uviscYrylr06Ojl04c_YGTD_71Yb2q20wto2h16fRnA3I6byjyM-WbP5ipr03hWK4fxhrkUg_X0x-uQMbLlk0LxK4_AH3iEzQeV2ByzbEcTZ1o4mlpusPy7043JxAUJ_det7BxgmKMSTlADg_jIutwP_MANJ-PeCMLYP_SgKgToLMRcKmU8eeivQeIae-AY_4pLD7sH6bqFq9nrU8SY7Q8KnZ8YJ71Vt9hEnRUZYQFk07Q0InwPUkAD6g8maCNONO-e7fr1SCCucXUSG9uK4m2vDQ-bpeI7xs5z68I6m3u7A0BP4_L7aPSqQf8lKBVzyx_AaFF_-Wid0emjJaKD9UjLCSwJ713KVFyNptRSEv_PQ-vy8ENgMmrBS_HiCbHg5xwJcVgfM69GrHKscp5wniTB5x0ForYUlWbQtlYSY5SgQ5KeHPkRR9AeL0IGgnKQCvb701BP3r4Zbc4O1V-hfiGwGR8i3vp8KLTb3OCCtJtSuvWb0Y7Rx4QFqwXnZ3raPna3DivYiJXPlohEnSKXz8DUQYgfwPpby1Di8",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "User Management",
+							"item": [
+								{
+									"name": "Create Admin Account",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"1234567\",\n    \"first_name\": \"James\",\n    \"last_name\": \"OJ\",\n    \"password\": \"123456\",\n    \"password_confirmation\": \"123456\",\n    \"roles\":[\n        \"agent\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/account/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"account",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Admin Account",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"2\",\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"1234567\",\n    \"first_name\": \"James\",\n    \"last_name\": \"Ade\",\n    \"password\": \"123456\",\n    \"password_confirmation\": \"123456\",\n    \"roles\": [\n        \"agent\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/account/edit",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"account",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List Admin Accounts",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "search_text",
+													"value": "1234567",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/account/list",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"account",
+												"list"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "One Admin Account",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/account/250c1337-c868-4be0-b568-095d01bac9de",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"account",
+												"250c1337-c868-4be0-b568-095d01bac9de"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "PArtner Management",
+							"item": [
+								{
+									"name": "Create Partner Account - FIll General Information",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"partner_name\": \"James\",\n    \"partner_display_name\": \"OJ\",\n    \"partner_address\": \"James\",\n    \"partner_contact_phone_number\": \"07055070140\",\n    \"partner_website\": \"google.com\",\n    \"partner_support_email\": \"fola.aremu@gmail.com\",\n    \"partner_contact_email\": \"fola.aremu@gmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partner/general-information",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partner",
+												"general-information"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Partner Account - FIll Company Information",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"partner_RC_Number\": \"fola.aremu@gmail.com\",\n    \"cac_uploads[]\":[\n        \"file1\",\n        \"file2\"\n    ],\n    \"license_uploads[]\":[\n        \"file1\",\n        \"file2\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partner/business-information/94dcb314-08cf-4003-a6a6-17142cf0a4ae",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partner",
+												"business-information",
+												"94dcb314-08cf-4003-a6a6-17142cf0a4ae"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "invite Partner Admin",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"first_name\": \"fola.aremu@gmail.com\",\n    \"last_name\": \"fola.aremu@gmail.com\",\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"fola.aremu@gmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partner/admin/invite/94dcb314-08cf-4003-a6a6-17142cf0a4ae",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partner",
+												"admin",
+												"invite",
+												"94dcb314-08cf-4003-a6a6-17142cf0a4ae"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": ".....",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"2\",\n    \"email\": \"fola.aremu@gmail.com\",\n    \"phone_number\": \"1234567\",\n    \"first_name\": \"James\",\n    \"last_name\": \"Ade\",\n    \"password\": \"123456\",\n    \"password_confirmation\": \"123456\",\n    \"roles\": [\n        \"agent\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/account/edit",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"account",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List Partner Accounts",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "search_text",
+													"value": "1234567",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partners",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partners"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List One Partner Admins",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partner/ea5bbb13-1fae-3fbe-b3ff-fcd7895d9584/users",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partner",
+												"ea5bbb13-1fae-3fbe-b3ff-fcd7895d9584",
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "View One Partner Admin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/partner/ea5bbb13-1fae-3fbe-b3ff-fcd7895d9584/user/01b05a07-a880-4371-b66b-d1b4aa753ab5",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"partner",
+												"ea5bbb13-1fae-3fbe-b3ff-fcd7895d9584",
+												"user",
+												"01b05a07-a880-4371-b66b-d1b4aa753ab5"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Roles and Permissions",
+							"item": [
+								{
+									"name": "Create Permissions",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"permissions\":[\n        \"list-all-campaign\",\n        \"add-user\",\n        \"edit-user\",\n        \"create-teams\",\n        \"set-out-of-office\",\n        \"team-management\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/permission/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"permission",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Roles",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"roles\":[\n        \"agent\",\n        \"team_lead\",\n        \"supervisor\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/role/create",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"role",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List All Roles",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/roles",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"roles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List All Permissions",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/permissions",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"permissions"
+											],
+											"query": [
+												{
+													"key": "role",
+													"value": "supervisor",
+													"description": "nullable\nstring",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Permissions to Role",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"permissions\":[\n        \"edit-user\",\n        \"create-teams\",\n        \"set-out-of-office\",\n        \"team-management\"\n    ],\n    \"role\":\"supervisor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/permissions/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"permissions",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Role to User",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"myrtice62@cummerata.info\",\n    \"role\":[\"supervisor\"]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/role/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"role",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Assign Permissions to User",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"fola.aremu@gmail.com\",\n    \"permissions\":[\n        \"one\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{localUrl}}/api/admin/permission/assign",
+											"host": [
+												"{{localUrl}}"
+											],
+											"path": [
+												"api",
+												"admin",
+												"permission",
+												"assign"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "fola.aremu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/login",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Current Logged In User",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/me",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/partner/refresh",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"partner",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/forgotPassword?email=myrtice62@cummerata.info",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"forgotPassword"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "myrtice62@cummerata.info"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password from Forgot Password Link",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/user/passwordReset?email=glennie.botsford%40example.net&token=f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e&password=folakunmi.aremuanew&password_confirmation=folakunmi.aremuanew",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"passwordReset"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "glennie.botsford%40example.net"
+										},
+										{
+											"key": "token",
+											"value": "f396b6d91234802f48cc9cb68491b55fa46d9e9d729698836be04ef148f06f7e"
+										},
+										{
+											"key": "password",
+											"value": "folakunmi.aremuanew"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "folakunmi.aremuanew"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Documents",
+					"item": [
+						{
+							"name": "List Documents",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/documents/list",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"documents",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Move Document to Another FOlder",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "folder_id",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/documents/move/56a787s6s5678s91q?folder_id=44",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"documents",
+										"move",
+										"56a787s6s5678s91q"
+									],
+									"query": [
+										{
+											"key": "folder_id",
+											"value": "44"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Document FOlders",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/documents-folders",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"documents-folders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Document FOlders",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "folder_name",
+											"value": "Test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/documents-folders",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"documents-folders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Document Folder Name",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "folder_name",
+											"value": "Not Test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/documents-folders/323f5dec-bb0d-11ed-a1ae-86d8092e5a5e",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"documents-folders",
+										"323f5dec-bb0d-11ed-a1ae-86d8092e5a5e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "List Users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/users",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Users Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{localUrl}}/api/admin/user/eeb5b33f-28b2-4bb0-b7a7-f93c21df0938",
+									"host": [
+										"{{localUrl}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"user",
+										"eeb5b33f-28b2-4bb0-b7a7-f93c21df0938"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjQ1MDAvYXBpL2FkbWluL2xvZ2luIiwiaWF0IjoxNjc3OTg0NDkyLCJleHAiOjE2NzgwNzA4OTIsIm5iZiI6MTY3Nzk4NDQ5MiwianRpIjoicmc1NGkyZzRxSEZGZnljdiIsInN1YiI6IjEiLCJwcnYiOiJkZjg4M2RiOTdiZDA1ZWY4ZmY4NTA4MmQ2ODZjNDVlODMyZTU5M2E5In0.It-ioJNvQp2cJqcDRao2k0Lq8ks9xt0lWp0ky82laLstOOD0HdWNzpuzVk6bO5VabveC8tYUurluK4VkkoaAtnHOGE1RRPJYfGIjHWjzSP6RgRJ1UPnq-h8hN3KWRIM1EGjtVDyFMZXPk0AxsOIiLMfTBLEviWGFkZvk_o4rL1gd78Hav9N81FU5TJsnvb-JeITmgTe9p2W5rfqUsiw3xC4q8ZvsYzzw6oqSWMNYiPEZqyrBFAMpXn90iIHaolVPHWgQMEoHSIMKTycRIRw3Hy4MB0fOSpDwyG43aEm9GeEMJuNRv6IQ1gStuZBC-N05eqWsnmAf0PDsSegnY68jZDEufVf670jVtkD4gwax8ZM8gKh-Q9OyXsSLLD9Y-uOhlV9GCgdWg61WabhBw98XrHRVHzf-gyZa_pOCPDQ2iQFLyfKhOjsiN6AgQKdqmwmWEAnvNWWmTxxptUMMtkbu1jRqp7FV0g9YT20S7itssOKMCt0evkyUqi2Q1nk2q6E84K4aawoZ3t_3NJpb4JwfSQrAdjpiEZn1yoezYWvlSUJbbJRXkI9w4NBYcOwao6jkuC0RqyRKH2iV22YyOGT1OmDj2-LcaBgWqEeoUhoVtuGEDBNu3Jd8_RbniYLg3A7pMq6tgehXsEKkCDeFEqy3SNz-rTtSrVIL3gaZZv8o-9w",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eventData\": {\n        \"product\": {\n            \"reference\": \"eeb5b33f-28b2-4bb0-b7a7-f93c21df0938\",\n            \"type\": \"RESERVED_ACCOUNT\"\n        },\n        \"transactionReference\": \"MNFY|15|20230225082811|000051\",\n        \"paymentReference\": \"MNFY|15|20230225082811|000051\",\n        \"paidOn\": \"2023-02-25 08:28:17.251\",\n        \"paymentDescription\": \"Ope\",\n        \"metaData\": [],\n        \"paymentSourceInformation\": [\n            {\n                \"bankCode\": null,\n                \"amountPaid\": 10000,\n                \"accountName\": \"Monnify Limited\",\n                \"sessionId\": \"J09MFbKBI5Uzu9Wfv3mrrS77aRDThpG4\",\n                \"accountNumber\": \"0065432190\"\n            }\n        ],\n        \"destinationAccountInformation\": {\n            \"bankCode\": \"035\",\n            \"bankName\": \"Wema bank\",\n            \"accountNumber\": \"5000461996\"\n        },\n        \"amountPaid\": 10000,\n        \"totalPayable\": 10000,\n        \"cardDetails\": [],\n        \"paymentMethod\": \"ACCOUNT_TRANSFER\",\n        \"currency\": \"NGN\",\n        \"settlementAmount\": \"9990.00\",\n        \"paymentStatus\": \"PAID\",\n        \"customer\": {\n            \"name\": \"Opeyemi AbdulQudus\",\n            \"email\": \"emmerich.clifford@example.com\"\n        }\n    },\n    \"eventType\": \"SUCCESSFUL_TRANSACTION\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:4500/api/monnify/transaction",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "4500",
+					"path": [
+						"api",
+						"monnify",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "http://127.0.0.1:4500",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://credbevy-env.eba-nsfp43cc.us-east-1.elasticbeanstalk.com",
+			"type": "string"
+		}
+	]
+}
