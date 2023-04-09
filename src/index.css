@@ -70,6 +70,15 @@ body {
   margin: 0;
 }
 
+.notification-tab-list {
+  display: flex;
+  justify-content: space-between;
+  color: #8a8b9f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
 .react-tabs__tab--selected {
   color: #8003cd;
   font-weight: 700;

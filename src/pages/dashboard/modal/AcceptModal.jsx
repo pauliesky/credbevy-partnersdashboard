@@ -12,40 +12,40 @@ const FundModal = ({ setAcceptModalOn, setAcceptChoice }) => {
     setAcceptModalOn(false);
   };
 
-  // const inputs = document.querySelectorAll("input");
-  // // button = document.querySelector("button");
+  const inputs = document.querySelectorAll("input");
+  // button = document.querySelector("button");
 
-  // inputs.forEach((input, index1) => {
-  //   input.addEventListener("keyup", (e) => {
-  //     const currentInput = input,
-  //       nextInput = input.nextElementSibling,
-  //       prevInput = input.previousElementSibling;
+  inputs.forEach((input, index1) => {
+    input.addEventListener("keyup", (e) => {
+      const currentInput = input,
+        nextInput = input.nextElementSibling,
+        prevInput = input.previousElementSibling;
 
-  //     if (currentInput.value.length > 1) {
-  //       currentInput.value = "";
-  //       return;
-  //     }
+      if (currentInput.value.length > 1) {
+        currentInput.value = "";
+        return;
+      }
 
-  //     if (
-  //       nextInput &&
-  //       nextInput.hasAttribute("disabled") &&
-  //       currentInput.value !== ""
-  //     ) {
-  //       nextInput.removeAttribute("disabled");
-  //       nextInput.focus();
-  //     }
+      if (
+        nextInput &&
+        nextInput.hasAttribute("disabled") &&
+        currentInput.value !== ""
+      ) {
+        nextInput.removeAttribute("disabled");
+        nextInput.focus();
+      }
 
-  //     if (e.key === "Backspace") {
-  //       inputs.forEach((input, index2) => {
-  //         if (index1 <= index2 && prevInput) {
-  //           input.setAttribute("disabled", true);
-  //           input.value = "";
-  //           prevInput.focus();
-  //         }
-  //       });
-  //     }
-  //   });
-  // });
+      if (e.key === "Backspace") {
+        inputs.forEach((input, index2) => {
+          if (index1 <= index2 && prevInput) {
+            input.setAttribute("disabled", true);
+            input.value = "";
+            prevInput.focus();
+          }
+        });
+      }
+    });
+  });
 
   return (
     <div
@@ -83,14 +83,17 @@ const FundModal = ({ setAcceptModalOn, setAcceptChoice }) => {
                   <input
                     type="number"
                     className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-20 h-20 font-medium text-[34px] text-center border-4 border-[#D9D9D9] rounded-[0.9375rem] outline-none"
+                    disabled
                   />
                   <input
                     type="number"
                     className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-20 h-20 font-medium text-[34px] text-center border-4 border-[#D9D9D9] rounded-[0.9375rem] outline-none"
+                    disabled
                   />
                   <input
                     type="number"
                     className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-20 h-20 font-medium text-[34px] text-center border-4 border-[#D9D9D9] rounded-[0.9375rem] outline-none"
+                    disabled
                   />
                 </div>
 

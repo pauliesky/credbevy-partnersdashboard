@@ -11,7 +11,7 @@ import TripleItem1 from "./dropdown/TripleItem1";
 import TripleItem2 from "./dropdown/TripleItem2";
 import closeModal from "./img/closeModal.png";
 import AcceptModal from "./modal/AcceptModal";
-import DeleteModal from "./modal/DeleteModal";
+import DeclineModal from "./modal/DeclineModal";
 import { useNavigate } from "react-router-dom";
 
 export default function LoanRequest() {
@@ -24,13 +24,8 @@ export default function LoanRequest() {
   const [acceptModalOn, setAcceptModalOn] = useState(false);
   const [acceptChoice, setAcceptChoice] = useState(false);
 
-  const [deleteModalOn, setDeleteModalOn] = useState(false);
-  const [deleteChoice, setDeleteChoice] = useState(false);
-
-  const handleConfirmClick = () => {
-    setAcceptChoice(true);
-    setAcceptModalOn(false);
-  };
+  const [declineModalOn, setDeclineModalOn] = useState(false);
+  const [declineChoice, setDeclineChoice] = useState(false);
 
   const handleDoneClick = () => {
     setAcceptModalOn(false);
@@ -46,7 +41,7 @@ export default function LoanRequest() {
   };
 
   const clicked3 = () => {
-    setDeleteModalOn(true);
+    setDeclineModalOn(true);
   };
 
   const customStyles = {
@@ -290,10 +285,10 @@ export default function LoanRequest() {
           </div>
         </div>
       )}
-      {deleteModalOn && (
-        <DeleteModal
-          setDeleteModalOn={setDeleteModalOn}
-          setDeleteChoice={setDeleteChoice}
+      {declineModalOn && (
+        <DeclineModal
+          setDeclineModalOn={setDeclineModalOn}
+          setDeclineChoice={setDeclineChoice}
         />
       )}
     </div>

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import closeModal from "../img/closeModal.png";
-import danger from "../img/danger.png";
+import redClose from "../img/redClose.png";
 
-const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
+const DeclineModal = ({ setDeclineModalOn, setDeclineChoice }) => {
   const handleProceedClick = () => {
-    setDeleteModalOn(false);
-    setDeleteChoice(true);
+    setDeclineModalOn(false);
+    setDeclineChoice(true);
   };
 
   const handleCancelClick = () => {
-    setDeleteModalOn(false);
-    setDeleteChoice(false);
+    setDeclineModalOn(false);
+    setDeclineChoice(false);
   };
 
   return (
@@ -35,20 +35,20 @@ const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
               {/* <img src={danger} alt="danger icon" className="w-28 h-28 mx-auto" /> */}
               <div className="text-center mt-[42px]">
                 <img
-                  src={danger}
+                  src={redClose}
                   alt="danger icon"
                   className="w-28 h-28 mx-auto"
                 />
 
-                <p className="font-semibold mt-[3.375rem]">
-                  Are you sure you want to delete this?
+                <p className="font-semibold text-2xl mt-[50px]">
+                  Are you sure you want to decline this offer?
                 </p>
                 <p className="text-sm text-[#8A8B9F] font-bold mt-6">
-                  Once you delete this, it can never be undone
+                  A loan request of ₦ 134,000.00 from a user with CS OF 75
                 </p>
               </div>
 
-              <div className="flex h-[67px] bg-[#F6F6F6] p-6 justify-between mt-[107px] justify-center items-center">
+              <div className="flex h-[67px] bg-[#F6F6F6] p-6 justify-between mt-[103px] justify-center items-center">
                 <button
                   className="p-2.5 rounded text-xs font-bold border-[0.5px] border-solid border-[#DCDCE4] bg-white"
                   onClick={handleCancelClick}
@@ -70,4 +70,4 @@ const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
   );
 };
 
-export default DeleteModal;
+export default DeclineModal;

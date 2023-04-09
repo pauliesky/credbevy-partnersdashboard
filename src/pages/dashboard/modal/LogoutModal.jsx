@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import closeModal from "../img/closeModal.png";
 import danger from "../img/danger.png";
+import { useNavigate } from "react-router-dom";
 
-const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
+const LogoutModal = ({ setLogoutModalOn, setLogoutChoice }) => {
+  const navigate = useNavigate();
+
   const handleProceedClick = () => {
-    setDeleteModalOn(false);
-    setDeleteChoice(true);
+    setLogoutModalOn(false);
+    setLogoutChoice(true);
+    navigate("/");
   };
 
   const handleCancelClick = () => {
-    setDeleteModalOn(false);
-    setDeleteChoice(false);
+    setLogoutModalOn(false);
+    setLogoutChoice(false);
   };
 
   return (
@@ -41,14 +45,17 @@ const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
                 />
 
                 <p className="font-semibold mt-[3.375rem]">
-                  Are you sure you want to delete this?
+                  Are you sure you want to Logout?
                 </p>
-                <p className="text-sm text-[#8A8B9F] font-bold mt-6">
-                  Once you delete this, it can never be undone
-                </p>
+                <div className="flex items-center justify-center">
+                  <p className="text-sm text-[#8A8B9F] font-bold mt-6 w-[436px]">
+                    For your security, we recommend closing your browser and
+                    clearing your browsing history after logging out.
+                  </p>
+                </div>
               </div>
 
-              <div className="flex h-[67px] bg-[#F6F6F6] p-6 justify-between mt-[107px] justify-center items-center">
+              <div className="flex h-[67px] bg-[#F6F6F6] p-6 justify-between mt-[87px] justify-center items-center">
                 <button
                   className="p-2.5 rounded text-xs font-bold border-[0.5px] border-solid border-[#DCDCE4] bg-white"
                   onClick={handleCancelClick}
@@ -59,7 +66,7 @@ const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
                   className="p-2.5 rounded text-xs font-bold bg-[#FA4D56] text-white"
                   onClick={handleProceedClick}
                 >
-                  Delete
+                  Proceed
                 </button>
               </div>
             </div>
@@ -70,4 +77,4 @@ const DeleteModal = ({ setDeleteModalOn, setDeleteChoice }) => {
   );
 };
 
-export default DeleteModal;
+export default LogoutModal;
