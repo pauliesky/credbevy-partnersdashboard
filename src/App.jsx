@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Layout from "./components/shared/Layout";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Wallet from "./pages/dashboard/Wallet";
+import Wallet from "./pages/dashboard/Wallet/Wallet";
 import LoanProducts from "./pages/dashboard/LoanProducts";
 import LoanRequest from "./pages/dashboard/LoanRequest";
 import LoanHistory from "./pages/dashboard/LoanHistory";

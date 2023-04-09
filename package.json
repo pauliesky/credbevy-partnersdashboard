@@ -14,15 +14,18 @@
     "@iconscout/react-unicons": "^2.0.2",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
+    "@mui/x-data-grid": "^6.0.4",
     "@ramonak/react-progress-bar": "^5.0.3",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
     "react-minimal-pie-chart": "^8.4.0",
+    "react-naira": "^1.2.1",
     "react-router-dom": "^6.10.0",
     "react-tabs": "^6.0.0",
-    "recharts": "^2.5.0"
+    "recharts": "^2.5.0",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
