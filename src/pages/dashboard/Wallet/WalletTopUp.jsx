@@ -7,11 +7,12 @@ const columns = [
   {
     name: "Description",
     id: "description",
-    selector: (row) => row.title,
+    selector: (row) => <div className="ml-[32px]"> {row.title}</div>,
     style: {
       maxWidth: "133px",
       maxHeight: "32px",
     },
+    width: "200px",
   },
   {
     name: "Amount",
@@ -262,7 +263,12 @@ function WalletTopUp({ onTab }) {
   return (
     <>
       <WalletHeader page={1} onNext={(value) => onTab(value)} />
-      <DataTable columns={columns} data={data} customStyles={customStyles} />
+      <DataTable
+        striped
+        columns={columns}
+        data={data}
+        customStyles={customStyles}
+      />
     </>
   );
 }

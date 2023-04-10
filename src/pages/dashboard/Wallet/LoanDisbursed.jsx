@@ -7,11 +7,12 @@ const columns = [
   {
     name: "Reciever",
     id: "description",
-    selector: (row) => row.title,
+    selector: (row) => <div className="ml-[32px]">{row.title}</div>,
     style: {
       maxWidth: "168px",
       maxHeight: "32px",
     },
+    width: "200px",
   },
   {
     name: "C.S",
@@ -248,11 +249,16 @@ const customStyles = {
   },
 };
 
-function LoanDisbursed({  onTab }) {
+function LoanDisbursed({ onTab }) {
   return (
     <>
       <WalletHeader page={2} onNext={(value) => onTab(value)} />
-      <DataTable columns={columns} data={data} customStyles={customStyles} />
+      <DataTable
+        striped
+        columns={columns}
+        data={data}
+        customStyles={customStyles}
+      />
     </>
   );
 }
