@@ -63,13 +63,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[0px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[0px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[20px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[20px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        {" "}
+        9/27/22
+      </div>
+    ),
   },
   {
     id: 2,
@@ -95,13 +100,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[0px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[0px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[20px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[20px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        {" "}
+        9/27/22
+      </div>
+    ),
   },
   {
     id: 3,
@@ -128,13 +138,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[0px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[0px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[20px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[20px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        {" "}
+        9/27/22
+      </div>
+    ),
   },
   {
     id: 4,
@@ -160,13 +175,17 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[0px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[0px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
-        <p>₦</p> 134,000.00
+        <p>{"₦"}</p> {" 134,000.00"}
       </div>
     ),
-    date: <div className="ml-[20px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[20px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        9/27/22
+      </div>
+    ),
   },
   {
     id: 5,
@@ -192,13 +211,17 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[0px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[0px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[20px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[20px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        {"9/27/22 "}
+      </div>
+    ),
   },
 ];
 
