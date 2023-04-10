@@ -8,17 +8,20 @@ const columns = [
   {
     name: "Description",
     id: "description",
-    selector: (row) => row.title,
+    selector: (row) => <div className=" pl-[32px]">{row.title}</div>,
     style: {
+      // background: "green",
       maxWidth: "133px",
       maxHeight: "32px",
     },
+    background: "red",
+    width: "200px",
   },
   {
     name: "Amount",
     id: "amount",
     selector: (row) => row.amount,
-      style: {
+    style: {
       maxWidth: "250px",
       maxHeight: "32px",
     },
@@ -43,7 +46,7 @@ const data = [
   {
     id: 1,
     title: (
-      <div className="flex flex-row justify-center gap-[16px] items-[center]">
+      <div className="flex flex-row justify-center gap-[16px] items-[center] ">
         <img alt="topup" src={wallet}></img>
         <div
           className="flex items-center text-[14px] font-[Manrope] font-[600]
@@ -255,6 +258,7 @@ const customStyles = {
     style: {
       paddingLeft: "0px",
       paddingRight: "0px",
+      // background: "red",
     },
   },
 };
@@ -262,8 +266,13 @@ const customStyles = {
 function AllActivities({ onTab }) {
   return (
     <>
-      <WalletHeader page={0} onNext = {(value) => onTab(value)} />
-      <DataTable columns={columns} data={data} customStyles={customStyles} />
+      <WalletHeader page={0} onNext={(value) => onTab(value)} />
+      <DataTable
+        striped
+        columns={columns}
+        data={data}
+        customStyles={customStyles}
+      />
     </>
   );
 }
