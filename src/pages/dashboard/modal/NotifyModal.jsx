@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import closeModal from "../img/closeModal.png";
 import transactionMinus from "../img/transactionMinus.png";
+import alarm from "../img/alarm.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const NotifyModal = ({ setNotifyModalOn }) => {
@@ -53,13 +54,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             review and approve or reject the application as soon
                             as possible.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -74,13 +75,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             that require your attention. Please review the
                             applications and respond as soon as possible.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -98,13 +99,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             . Please log in to your account to view the
                             transaction details.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -122,13 +123,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             . Please log in to your account to view the
                             transaction details.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -143,13 +144,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             review the details and contact us if you have any
                             questions.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -164,13 +165,13 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             review the details and contact us if you have any
                             questions.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
                       </div>
 
-                      <div className="mt-4 flex gap-4 items-start">
+                      <div className="mt-6 flex gap-4 items-start">
                         <img
                           src={transactionMinus}
                           alt="transaction minus"
@@ -184,7 +185,7 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                             review and approve or reject the application as soon
                             as possible.
                           </p>
-                          <p className="mt-2 text-[10px] text-[#8A8B9F] leading-4">
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
                             04 Apr 2023, 2:30 PM
                           </p>
                         </div>
@@ -192,13 +193,407 @@ const NotifyModal = ({ setNotifyModalOn }) => {
                     </div>
                   </TabPanel>
                   <TabPanel>
-                    <h2>Request</h2>
+                    <div className="mt-8">
+                      <div className="flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            <span className="font-bold">John Doe</span> has
+                            submitted a loan application for{" "}
+                            <span className="font-bold">N100,000</span>. Please
+                            review and approve or reject the application as soon
+                            as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            You have{" "}
+                            <span className="font-bold">
+                              two pending loan applications
+                            </span>{" "}
+                            that require your attention. Please review the
+                            applications and respond as soon as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            Your loan of{" "}
+                            <span className="font-bold">N200,000</span> to{" "}
+                            <span className="font-bold">Jane Smith</span> has
+                            been{" "}
+                            <span className="font-bold">
+                              successfully disbursed
+                            </span>
+                            . Please log in to your account to view the
+                            transaction details.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            Your loan of{" "}
+                            <span className="font-bold">N200,000</span> to{" "}
+                            <span className="font-bold">Jane Smith</span> has
+                            been{" "}
+                            <span className="font-bold">
+                              successfully disbursed
+                            </span>
+                            . Please log in to your account to view the
+                            transaction details.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            We regret to inform you that there was an{" "}
+                            <span className="font-bold">error processing</span>{" "}
+                            the disbursement of your loan to{" "}
+                            <span className="font-bold">John Doe</span>. Please
+                            review the details and contact us if you have any
+                            questions.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            We regret to inform you that there was an{" "}
+                            <span className="font-bold">error processing</span>{" "}
+                            the disbursement of your loan to{" "}
+                            <span className="font-bold">John Doe</span>. Please
+                            review the details and contact us if you have any
+                            questions.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            <span className="font-bold">John Doe</span> has
+                            submitted a loan application for{" "}
+                            <span className="font-bold">N100,000</span>. Please
+                            review and approve or reject the application as soon
+                            as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </TabPanel>
                   <TabPanel>
-                    <h2>Transactions</h2>
+                    <div className="mt-8">
+                      <div className="flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            <span className="font-bold">John Doe</span> has
+                            submitted a loan application for{" "}
+                            <span className="font-bold">N100,000</span>. Please
+                            review and approve or reject the application as soon
+                            as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            You have{" "}
+                            <span className="font-bold">
+                              two pending loan applications
+                            </span>{" "}
+                            that require your attention. Please review the
+                            applications and respond as soon as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            Your loan of{" "}
+                            <span className="font-bold">N200,000</span> to{" "}
+                            <span className="font-bold">Jane Smith</span> has
+                            been{" "}
+                            <span className="font-bold">
+                              successfully disbursed
+                            </span>
+                            . Please log in to your account to view the
+                            transaction details.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            Your loan of{" "}
+                            <span className="font-bold">N200,000</span> to{" "}
+                            <span className="font-bold">Jane Smith</span> has
+                            been{" "}
+                            <span className="font-bold">
+                              successfully disbursed
+                            </span>
+                            . Please log in to your account to view the
+                            transaction details.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            We regret to inform you that there was an{" "}
+                            <span className="font-bold">error processing</span>{" "}
+                            the disbursement of your loan to{" "}
+                            <span className="font-bold">John Doe</span>. Please
+                            review the details and contact us if you have any
+                            questions.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            We regret to inform you that there was an{" "}
+                            <span className="font-bold">error processing</span>{" "}
+                            the disbursement of your loan to{" "}
+                            <span className="font-bold">John Doe</span>. Please
+                            review the details and contact us if you have any
+                            questions.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={transactionMinus}
+                          alt="transaction minus"
+                          className="w-[29px] h-[29px] bg-[#8003CD33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            <span className="font-bold">John Doe</span> has
+                            submitted a loan application for{" "}
+                            <span className="font-bold">N100,000</span>. Please
+                            review and approve or reject the application as soon
+                            as possible.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </TabPanel>
                   <TabPanel>
-                    <h2>Accounts</h2>
+                    <div className="mt-8">
+                      <div className="flex gap-4 items-start">
+                        <img
+                          src={alarm}
+                          alt="alarm"
+                          className="w-[29px] h-[29px] bg-[#F1C21B33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            The loan marketplace platform will be undergoing{""}
+                            <span className="font-bold">
+                              system maintenance
+                            </span>{" "}
+                            on <span className="font-bold">April 20th</span>{" "}
+                            from <span className="font-bold">12:00 AM</span> to
+                            <span className="font-bold"> 3:00 AM EST</span>.
+                            During this time, some features may be unavailable.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={alarm}
+                          alt="alarm"
+                          className="w-[29px] h-[29px] bg-[#F1C21B33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            The loan marketplace platform will be undergoing{""}
+                            <span className="font-bold">
+                              system maintenance
+                            </span>{" "}
+                            on <span className="font-bold">April 20th</span>{" "}
+                            from <span className="font-bold">12:00 AM</span> to
+                            <span className="font-bold"> 3:00 AM EST</span>.
+                            During this time, some features may be unavailable.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={alarm}
+                          alt="alarm"
+                          className="w-[29px] h-[29px] bg-[#F1C21B33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            The loan marketplace platform will be undergoing{""}
+                            <span className="font-bold">
+                              system maintenance
+                            </span>{" "}
+                            on <span className="font-bold">April 20th</span>{" "}
+                            from <span className="font-bold">12:00 AM</span> to
+                            <span className="font-bold"> 3:00 AM EST</span>.
+                            During this time, some features may be unavailable.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 flex gap-4 items-start">
+                        <img
+                          src={alarm}
+                          alt="alarm"
+                          className="w-[29px] h-[29px] bg-[#F1C21B33] p-[7px] rounded-full"
+                        />
+                        <div className="">
+                          <p className="font-normal text-xs leading-6">
+                            The loan marketplace platform will be undergoing{""}
+                            <span className="font-bold">
+                              system maintenance
+                            </span>{" "}
+                            on <span className="font-bold">April 20th</span>{" "}
+                            from <span className="font-bold">12:00 AM</span> to
+                            <span className="font-bold"> 3:00 AM EST</span>.
+                            During this time, some features may be unavailable.
+                          </p>
+                          <p className="mt-2 font-bold text-[10px] text-[#8A8B9F] leading-4">
+                            04 Apr 2023, 2:30 PM
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </TabPanel>
                   <TabPanel>
                     <h2>Others</h2>

@@ -79,6 +79,10 @@ body {
   margin: 0;
 }
 
+.otp-field:focus {
+  border: 3.67424px solid #8003cd;
+}
+
 .react-tabs__tab--selected {
   color: #8003cd;
   font-weight: 700;

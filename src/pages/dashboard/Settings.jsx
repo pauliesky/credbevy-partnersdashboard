@@ -12,6 +12,8 @@ import UserModal from "./modal/UserModal";
 import DeleteModal from "./modal/DeleteModal";
 import UserRoles from "./UserRoles.jsx";
 import company from "../../components/shared/img/company.png";
+import charcoFive from "./img/charcoFive.png";
+import Switch from "./toggle/Switch";
 
 export default function Settings() {
   const [userModalOn, setUserModalOn] = useState(false);
@@ -334,10 +336,111 @@ export default function Settings() {
             </div>
           </TabPanel>
           <TabPanel>
-            <h2>Notifications</h2>
+            <div className="">
+              <div className="flex justify-end mt-[34px] gap-8">
+                <button
+                  className="px-[34px] py-2.5 rounded text-xs font-bold border-[0.5px] border-solid border-[#868e96] bg-white"
+                  onClick={handleCancelClick}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="px-[34px] py-2.5 rounded text-xs font-bold bg-[#8003CD] text-white"
+                  onClick={handleProceedClick}
+                >
+                  Save
+                </button>
+              </div>
+              <div className="mt-[52px]">
+                <div className="flex flex-col gap-8">
+                  <div className="flex justify-between">
+                    <div className="">
+                      <p className="font-bold text-sm leading-6">
+                        Enable Desktop Notification
+                      </p>
+                      <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                        Receive notification from all loan requests, repayments
+                        etc.
+                      </p>
+                    </div>
+                    <div className="mr-[188px] mt-1.5">
+                      <Switch />
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="">
+                      <p className="font-bold text-sm leading-6">
+                        Enable Unread Notification Badge
+                      </p>
+                      <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                        Show a read icon when notifications are unread
+                      </p>
+                    </div>
+                    <div className="mr-[188px] mt-1.5">
+                      <Switch />
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="">
+                      <p className="font-bold text-sm leading-6">
+                        Communication Emails
+                      </p>
+                      <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                        Receive emails for Loan requests, repayment etc.
+                      </p>
+                    </div>
+                    <div className="mr-[188px] mt-1.5">
+                      <Switch />
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="">
+                      <p className="font-bold text-sm leading-6">
+                        Announcements & Updates
+                      </p>
+                      <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                        Receive announcements for our products and services.
+                      </p>
+                    </div>
+                    <div className="mr-[188px] mt-1.5">
+                      <Switch />
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="">
+                      <p className="font-bold text-sm leading-6">
+                        Disable All Sound Notifications
+                      </p>
+                      <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                        Mute all notifications on loan requests, repayments etc.
+                      </p>
+                    </div>
+                    <div className="mr-[188px] mt-1.5">
+                      <Switch />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </TabPanel>
           <TabPanel>
-            <h2>Integrations</h2>
+            <div className=" mt-6font-semibold text-sm text-[#8A8B9F] mt-6 leading-4">
+              Make life easier for your company by adding any of these
+              integrations
+            </div>
+            <div className="mt-[141px] flex flex-col items-center justify-center">
+              <img
+                src={charcoFive}
+                alt="Charco High Five"
+                className="w-[311px] h-[429px]"
+              />
+              <p className="mt-[7px] text-sm text-[#8A8B9F] font-bold leading-4">
+                You do not have any integrations yet!
+              </p>
+              <button className="p-2.5 mt-8 mb-[337px] font-bold text-xs text-white leading-4 bg-[#8003CD] rounded">
+                Coming Soon
+              </button>
+            </div>
           </TabPanel>
           <TabPanel>
             <div className="flex gap-4 mt-16">
