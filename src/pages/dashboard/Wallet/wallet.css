@@ -18,10 +18,10 @@
 }
 
 [data-column-id="date"].rdt_TableCol {
-  margin-left: 121px;
+  margin-left: 85px;
 }
 [data-column-id="status"].rdt_TableCol {
-  margin-left: 120px;
+  margin-left: 30px;
 }
 
 /* LOAN DISBURSED */
@@ -34,6 +34,9 @@
 [data-column-id="disbursed__date"].rdt_TableCol {
   margin-left: 8px;
 }
+
+
+
 
 .rdt_TableRow:first-child {
   /* background-color: red; */

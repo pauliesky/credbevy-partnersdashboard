@@ -7,7 +7,7 @@ function WalletHeader({ page, onNext }) {
         <div
           className={`${
             page === 0
-              ? "text-[#8003CD] mr-[57px]  leading-[19px]  font-[Manrope]   text-[14px]"
+              ? "text-[#8003CD] mr-[57px]  leading-[19px]  font-[Manrope] font-[700]  text-[14px]"
               : "mr-[57px]  leading-[19px]  font-[Manrope]  text-[14px]"
           }`}
           onClick={() => onNext(0)}
@@ -17,7 +17,7 @@ function WalletHeader({ page, onNext }) {
         <div
           className={`${
             page === 1
-              ? "text-[#8003CD] mr-[57px]  leading-[19px]  font-[Manrope]   text-[14px]"
+              ? "text-[#8003CD] mr-[57px] font-[700] leading-[19px]  font-[Manrope]   text-[14px]"
               : "mr-[57px]  leading-[19px]  font-[Manrope]   text-[14px]"
           }`}
           onClick={() => onNext(1)}
@@ -27,7 +27,7 @@ function WalletHeader({ page, onNext }) {
         <div
           className={`${
             page === 2
-              ? "text-[#8003CD] mr-[57px]  leading-[19px]  font-[Manrope]   text-[14px]"
+              ? "text-[#8003CD] mr-[57px]  leading-[19px]  font-[Manrope]  font-[700] text-[14px]"
               : "mr-[57px]  leading-[19px]  font-[Manrope]  text-[14px]"
           }`}
           onClick={() => onNext(2)}

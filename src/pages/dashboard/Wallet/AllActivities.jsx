@@ -10,7 +10,6 @@ const columns = [
     id: "description",
     selector: (row) => row.title,
     style: {
-      // background: "blue",
       maxWidth: "133px",
       maxHeight: "32px",
     },
@@ -19,11 +18,19 @@ const columns = [
     name: "Amount",
     id: "amount",
     selector: (row) => row.amount,
+      style: {
+      maxWidth: "250px",
+      maxHeight: "32px",
+    },
   },
   {
     name: "Date",
     id: "date",
     selector: (row) => row.date,
+    style: {
+      maxWidth: "190px",
+      maxHeight: "32px",
+    },
   },
   {
     name: "Status",
@@ -48,13 +55,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[106px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[106px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[50px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[50px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333] ">
+        {" "}
+        9/27/22
+      </div>
+    ),
     status: (
       <div className=" flex flex-row justify-center items-center gap-[7px] rounded-[30px] h-[32px] w-[82px] bg-[#F1C21B66]">
         <div className=" w-[6px] h-[6px] rounded-full bg-[#F1C21B]"></div>
@@ -82,13 +94,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[106px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[106px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[50px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[50px]  font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333] ">
+        {" "}
+        9/27/22
+      </div>
+    ),
     status: (
       <div className=" flex flex-row justify-center items-center gap-[7px] rounded-[30px] h-[32px] w-[82px] bg-[#FA4D5666]">
         <div className=" w-[6px] h-[6px] rounded-full bg-[#FA4D56]"></div>
@@ -116,13 +133,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[106px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[106px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[50px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[50px]  font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333]">
+        {" "}
+        9/27/22
+      </div>
+    ),
     status: (
       <div className=" flex flex-row justify-center items-center gap-[7px] rounded-[30px] h-[32px] w-[82px] bg-[#F1C21B66]">
         <div className=" w-[6px] h-[6px] rounded-full bg-[#F1C21B]"></div>
@@ -141,7 +163,7 @@ const data = [
       <div className="flex flex-row justify-center gap-[16px] items-[center]">
         <img alt="topup" src={transfer}></img>
         <div
-          className="flex items-center text-[14px] font-[Manrope] font-[600]
+          className="flex items-center text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px]  text-[#333333]"
         >
           Transfer
@@ -150,13 +172,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[106px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[106px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[50px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[50px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333] ">
+        {" "}
+        9/27/22
+      </div>
+    ),
     status: (
       <div className=" flex flex-row justify-center items-center gap-[7px] rounded-[30px] h-[32px] w-[82px] bg-[#FA4D5666]">
         <div className=" w-[6px] h-[6px] rounded-full bg-[#FA4D56]"></div>
@@ -184,13 +211,18 @@ const data = [
     ),
     amount: (
       <div
-        className=" flex gap-1 ml-[106px] text-[14px] font-[Manrope] font-[600]
+        className=" flex gap-1 ml-[106px] text-[14px]  font-[600]
         leading-[24px] tracking-[-0.5px] text-[#333333]"
       >
         <p>₦</p> 134,000.00
       </div>
     ),
-    date: <div className="ml-[50px]"> 9/27/22</div>,
+    date: (
+      <div className="ml-[50px] font-[Manrope] font-[600] text-[24] tracking-[-0.5px] text-[#333333] ">
+        {" "}
+        9/27/22
+      </div>
+    ),
     status: (
       <div className=" flex flex-row justify-center items-center gap-[7px] rounded-[30px] h-[32px] w-[82px] bg-[#C2FED3]">
         <div className=" w-[6px] h-[6px] rounded-full bg-[#42BE65]"></div>
