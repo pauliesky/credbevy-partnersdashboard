@@ -12,6 +12,7 @@ const columns = [
       maxWidth: "168px",
       maxHeight: "32px",
     },
+    
     width: "200px",
   },
   {
@@ -230,6 +231,7 @@ const customStyles = {
   headCells: {
     style: {
       maxHeight: "42px",
+      // background: "red",
     },
   },
   headRow: {
