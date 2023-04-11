@@ -249,6 +249,15 @@ const customStyles = {
       // background: "red",
     },
   },
+  rows: {
+    style: {
+      // background: "red",
+      alignItems: "center",
+      height: "73px",
+      border: "1px solid #e5eaef",
+      borderTop: "none",
+    },
+  },
 };
 
 function LoanDisbursed({ onTab }) {

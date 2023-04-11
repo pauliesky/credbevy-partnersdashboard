@@ -249,13 +249,21 @@ const customStyles = {
       minHeight: "42px",
       border: "1px solid #E5EAEF",
       borderTop: "none",
+      // background: "red",
     },
   },
   cells: {
     style: {
       paddingLeft: "0px",
       paddingRight: "0px",
-      // background: "red",
+    },
+  },
+  rows: {
+    style: {
+      alignItems: "center",
+      height: "73px",
+      border: "1px solid #e5eaef",
+      borderTop: "none",
     },
   },
 };

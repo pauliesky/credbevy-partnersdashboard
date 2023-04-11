@@ -3,7 +3,7 @@ import React from "react";
 function WalletHeader({ page, onNext }) {
   return (
     <>
-      <div className="h-[73px] border rounded-t-[4px] flex flex-row  hover:cursor-pointer items-center pl-[24px] font-[500] text-[#8A8B9F]">
+      <div className="h-[73px] border rounded-t-[8px] flex flex-row  hover:cursor-pointer items-center pl-[24px] font-[500] text-[#8A8B9F]">
         <div
           className={`${
             page === 0

@@ -257,6 +257,15 @@ const customStyles = {
       paddingRight: "0px",
     },
   },
+  rows: {
+    style: {
+      
+      alignItems: "center",
+      height: "73px",
+      border: "1px solid #e5eaef",
+      borderTop: "none",
+    },
+  },
 };
 
 function WalletTopUp({ onTab }) {
