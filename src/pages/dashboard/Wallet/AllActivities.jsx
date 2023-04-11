@@ -10,11 +10,9 @@ const columns = [
     id: "description",
     selector: (row) => <div className=" pl-[32px]">{row.title}</div>,
     style: {
-      // background: "green",
       maxWidth: "133px",
       maxHeight: "32px",
     },
-    background: "red",
     width: "200px",
   },
   {
@@ -244,7 +242,6 @@ const customStyles = {
   headCells: {
     style: {
       maxHeight: "42px",
-      // background: "red",
     },
   },
   headRow: {
