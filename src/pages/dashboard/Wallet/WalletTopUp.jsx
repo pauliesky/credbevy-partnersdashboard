@@ -242,6 +242,14 @@ const customStyles = {
     style: {
       maxHeight: "42px",
       // background: "red",
+      fontFamily: "Manrope",
+      fontStyle: "normal",
+      color: "#8a8b9f",
+      fontSize: "14px",
+      padding: "0px",
+      fontWeight: "700",
+      lineHeight: "24px",
+      letterSpacing: "-0.5px",
     },
   },
   headRow: {
@@ -259,11 +267,13 @@ const customStyles = {
   },
   rows: {
     style: {
-      
       alignItems: "center",
       height: "73px",
       border: "1px solid #e5eaef",
       borderTop: "none",
+      "&:last-child": {
+        borderRadius: " 0px 0px 8px 8px",
+      },
     },
   },
 };

@@ -14,8 +14,9 @@ import UserRoles from "./UserRoles.jsx";
 import company from "../../components/shared/img/company.png";
 import charcoFive from "./img/charcoFive.png";
 import Switch from "./toggle/Switch";
-import twitterIcon from "./img/Transfer.png";
-import infoIcon from "./img/Transfer.png";
+import twitterIcon from "./img/twitter.png";
+import infoIcon from "./img/infoCircle.png";
+import IntegrationModal from "./modal/IntegrationModal";
 
 export default function Settings() {
   const [userModalOn, setUserModalOn] = useState(false);
@@ -23,6 +24,8 @@ export default function Settings() {
 
   const [deleteModalOn, setDeleteModalOn] = useState(false);
   const [deleteChoice, setDeleteChoice] = useState(false);
+
+  const [integrationModalConnect, setIntegrationModalConnect] = useState(false);
 
   const clicked1 = () => {
     setUserModalOn(true);
@@ -183,9 +186,9 @@ export default function Settings() {
     },
   ];
   return (
-    <div className="p-5 mt-6">
-      <div className="font-bold text-[34px] leading-9 mb-8">Settings</div>
-      <div className="mt-6">
+    <div className=" p-5 mt-6">
+      <div className="  font-bold text-[34px] leading-9 mb-8">Settings</div>
+      <div className="mt-6 ">
         <Tabs className={"major-tabs"}>
           <TabList className={"settings-tab-list"}>
             <Tab className={"major-tab"}>Company Info</Tab>
@@ -426,9 +429,8 @@ export default function Settings() {
             </div>
           </TabPanel>
           <TabPanel>
-            <div className=" mt-6font-semibold text-sm text-[#8A8B9F] mt-6 leading-4">
-              Make life easier for your company by adding any of these
-              integrations
+            <div className=" mt-[40px] w-[199px] h-[36px] normal font-[700] text-[34px] leading-[36px] tracking-[-0.5px] text-[#333333] ">
+              Integrations
             </div>
             <div className="flex justify-between">
               <div className=" mt-6font-semibold text-sm text-[#8A8B9F] mt-6 leading-4">
@@ -445,7 +447,7 @@ export default function Settings() {
                   <input
                     type="text"
                     placeholder="Search for integrations"
-                    className="outline-none text-xs font-bold w-[128px] placeholder:text-#8A8B9F placeholder:font-[Manrope]"
+                    className="outline-none text-xs font-bold w-[118px] placeholder:text-#8A8B9F placeholder:font-[Manrope]"
                   />
                 </div>
               </div>
@@ -535,8 +537,37 @@ export default function Settings() {
                 </div>
                 <div className="flex flex-row items-center justify-center text-align-center">
                   <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
-                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
-                      Disconnect
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
                     </p>
                   </button>
                 </div>
@@ -622,37 +653,8 @@ export default function Settings() {
                 </div>
                 <div className="flex flex-row items-center justify-center text-align-center">
                   <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
-                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
-                      Disonnect
-                    </p>
-                  </button>
-                </div>
-              </div>
-              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
-                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
-                  <img
-                    alt="twitter-icon"
-                    src={twitterIcon}
-                    className="h-[25px] w-[30px]"
-                  ></img>
-                  <img
-                    alt="info-icon"
-                    src={infoIcon}
-                    className="w-[10px] h-[10px]"
-                  ></img>
-                </div>
-                <div className="mt-[24px] mx-[24px] ">
-                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
-                    Recova
-                  </div>
-                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
-                    BVN level recovery mandate
-                  </div>
-                </div>
-                <div className="flex flex-row items-center justify-center text-align-center">
-                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
-                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
-                      Disconnect
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
                     </p>
                   </button>
                 </div>
@@ -709,8 +711,8 @@ export default function Settings() {
                 </div>
                 <div className="flex flex-row items-center justify-center text-align-center">
                   <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
-                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
-                      Disconnect
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
                     </p>
                   </button>
                 </div>
@@ -919,11 +921,11 @@ export default function Settings() {
                 </div>
               </div>
             </div>
-            {/* {integrationModalConnect && (
+            {integrationModalConnect && (
               <IntegrationModal
                 setIntegrationModalConnect={setIntegrationModalConnect}
               />
-            )} */}
+            )}
           </TabPanel>
           <TabPanel>
             <div className="flex gap-4 mt-16">
