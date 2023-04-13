@@ -12,7 +12,7 @@ const columns = [
       maxWidth: "168px",
       maxHeight: "32px",
     },
-    
+
     width: "200px",
   },
   {
@@ -231,7 +231,13 @@ const customStyles = {
   headCells: {
     style: {
       maxHeight: "42px",
-      // background: "red",
+      fontFamily: "Manrope",
+      fontStyle: "normal",
+      color: "#8a8b9f",
+      fontSize: "14px",
+      fontWeight: "700",
+      lineHeight: "24px",
+      letterSpacing: "-0.5px",
     },
   },
   headRow: {
@@ -246,16 +252,17 @@ const customStyles = {
     style: {
       paddingLeft: "0px",
       paddingRight: "0px",
-      // background: "red",
     },
   },
   rows: {
     style: {
-      // background: "red",
       alignItems: "center",
       height: "73px",
       border: "1px solid #e5eaef",
       borderTop: "none",
+      "&:last-child": {
+        borderRadius: " 0px 0px 8px 8px",
+      },
     },
   },
 };
