@@ -102,9 +102,21 @@ function IntegrationModal({ setIntegrationModalConnect }) {
                     </ul>
                   </div>
                 </TabPanel>
-                <TabPanel>2</TabPanel>
-                <TabPanel>3</TabPanel>
-                <TabPanel>4</TabPanel>
+                <TabPanel>
+                  <div className="  mb-[40rem]">Payment</div>
+                </TabPanel>
+                <TabPanel>
+                  {" "}
+                  <div className="  mb-[40rem]">
+                    Security & Compliance
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  {" "}
+                  <div className=" mb-[40rem]">
+                    Security & Compliance
+                  </div>{" "}
+                </TabPanel>
               </Tabs>
             </div>
             <div className="mt-16 bg-[#F6F6F6] rounded-b-lg flex justify-between h-16 py-4 px-8">
