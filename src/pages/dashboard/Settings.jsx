@@ -428,19 +428,499 @@ export default function Settings() {
               Make life easier for your company by adding any of these
               integrations
             </div>
-            <div className="mt-[141px] flex flex-col items-center justify-center">
-              <img
-                src={charcoFive}
-                alt="Charco High Five"
-                className="w-[311px] h-[429px]"
-              />
-              <p className="mt-[7px] text-sm text-[#8A8B9F] font-bold leading-4">
-                You do not have any integrations yet!
-              </p>
-              <button className="p-2.5 mt-8 mb-[337px] font-bold text-xs text-white leading-4 bg-[#8003CD] rounded">
-                Coming Soon
-              </button>
+            <div className="flex justify-between">
+              <div className=" mt-6font-semibold text-sm text-[#8A8B9F] mt-6 leading-4">
+                Make life easier for your company by adding any of these
+                integrations
+              </div>
+              <div className="flex border h-[45px] w-[205px] border-[#dee2e6] rounded-lg items-center justify-between pl-6 pr-10">
+                <div className="flex gap-2">
+                  <img
+                    src={searchNormal}
+                    alt="search icon"
+                    className="w-4 h-4"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Search for integrations"
+                    className="outline-none text-xs font-bold w-[128px] placeholder:text-#8A8B9F placeholder:font-[Manrope]"
+                  />
+                </div>
+              </div>
             </div>
+            <div className="grid grid-cols-4 gap-[16px] mt-[64px] ">
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button
+                    onClick={() => setIntegrationModalConnect(true)}
+                    className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]"
+                  >
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Disconnect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Disonnect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Disconnect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#F5222D] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Disconnect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+              <div className="w-[251px] h-[200px] border border-[1px solid #E5EAEF] rounded-[4px]">
+                <div className="flex flex-row justify-between mx-[24px] mt-[30px]">
+                  <img
+                    alt="twitter-icon"
+                    src={twitterIcon}
+                    className="h-[25px] w-[30px]"
+                  ></img>
+                  <img
+                    alt="info-icon"
+                    src={infoIcon}
+                    className="w-[10px] h-[10px]"
+                  ></img>
+                </div>
+                <div className="mt-[24px] mx-[24px] ">
+                  <div className="text-[#333333] h-4 w-[54px] font-4 font-[700]  normal leading-[16px] tracking-[-0.5px] ">
+                    Recova
+                  </div>
+                  <div className=" mt-1 h-4 w-[140px]  normal font-[400] text-[12px] leading-4 tracking-[-0.5px] text-[#8A8B9F] ">
+                    BVN level recovery mandate
+                  </div>
+                </div>
+                <div className="flex flex-row items-center justify-center text-align-center">
+                  <button className=" mb-[24px] mt-[20px]  rounded-[30px] border border-[ 1px solid #E5EAEF] h-[36px] w-[182px] gap-[10px]">
+                    <p className=" normal text-[#333333] font-[600] text-[12px] leading-[16px]  tracking-[-0.5px]">
+                      Connect
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            {integrationModalConnect && (
+              <IntegrationModal
+                setIntegrationModalConnect={setIntegrationModalConnect}
+              />)}
           </TabPanel>
           <TabPanel>
             <div className="flex gap-4 mt-16">
