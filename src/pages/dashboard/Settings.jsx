@@ -14,6 +14,8 @@ import UserRoles from "./UserRoles.jsx";
 import company from "../../components/shared/img/company.png";
 import charcoFive from "./img/charcoFive.png";
 import Switch from "./toggle/Switch";
+import twitterIcon from "./img/Transfer.png";
+import infoIcon from "./img/Transfer.png";
 
 export default function Settings() {
   const [userModalOn, setUserModalOn] = useState(false);
@@ -917,10 +919,11 @@ export default function Settings() {
                 </div>
               </div>
             </div>
-            {integrationModalConnect && (
+            {/* {integrationModalConnect && (
               <IntegrationModal
                 setIntegrationModalConnect={setIntegrationModalConnect}
-              />)}
+              />
+            )} */}
           </TabPanel>
           <TabPanel>
             <div className="flex gap-4 mt-16">
