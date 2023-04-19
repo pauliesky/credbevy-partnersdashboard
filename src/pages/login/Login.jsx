@@ -1,19 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import credbevyLogo from "./img/credbevyLogo.png";
 import eye from "./img/eye.png";
 import eyeSlash from "./img/eyeSlash.png";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../_redux/thunks";
 
 export default function Login() {
-  const [user, setUser] = useState("credbevy@gmail.com");
-  const [pass, setPass] = useState("credbevy");
+  const [state, setState] = useState({
+    email: "",
+    password: "",
+  });
 
-  const [type, setType] = useState("password");
+  const { email, password } = state;
+
+  const { currentUser } = useSelector((state) => state.authReducer);
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/dashboard");
+    }
+  }, [currentUser]);
+
+  const [type, setType] = useState("password");
+
+  const dispatch = useDispatch();
+
   const handleValidate = (e) => {
-    navigate("/dashboard");
+    e.preventDefault();
+    if (!email || !password) {
+      return;
+    }
+    dispatch(login(email, password));
+    setState({ email: "", password: "" });
+  };
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setState({ ...state, [name]: value });
   };
 
   return (
@@ -37,8 +63,8 @@ export default function Login() {
             id="email"
             name="email"
             type="text"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
+            value={email}
+            onChange={handleChange}
             className="peer placeholder-transparent mt-[52px] p-3 border border-[#adb5bd] rounded-[5px] w-[350px] h-[60px] outline-none"
             placeholder="email"
           />
@@ -54,8 +80,8 @@ export default function Login() {
             id="password"
             name="password"
             type={type}
-            value={pass}
-            onChange={(e) => setPass(e.target.value)}
+            value={password}
+            onChange={handleChange}
             className="peer placeholder-transparent mt-6 p-3 border border-[#adb5bd] rounded-[5px] w-[350px] h-[60px] outline-none"
             placeholder="password"
           />

@@ -162,8 +162,6 @@ const RequestDetails = ({ RequestDetails }) => {
           <img src={whiteCircle} alt="tick icon" className="w-6 h-6" />
           <p className="text-xs font-bold text-white">Accept Request</p>
         </button>
-        <button className=""></button>
-        <button className=""></button>
       </div>
 
       <div className="min-h-[408px] border border-solid border-[#E5EAEF] rounded mb-44">

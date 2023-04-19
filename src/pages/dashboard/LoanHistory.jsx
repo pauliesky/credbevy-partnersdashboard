@@ -5,6 +5,7 @@ import eye from "../login/img/eye.png";
 import closeCircle from "./img/closeCircle.png";
 import download from "./img/download.png";
 import infoCircle from "./img/infoCircle.png";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import DataTable from "react-data-table-component";
 import TripleItem1 from "./dropdown/TripleItem1";
 
@@ -330,6 +331,7 @@ export default function LoanRequest() {
             customStyles={customStyles}
             striped
             selectableRows
+            selectableRowsComponent={Checkbox3}
             responsive
           />
         </div>

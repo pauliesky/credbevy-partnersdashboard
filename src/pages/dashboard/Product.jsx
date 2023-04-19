@@ -6,6 +6,7 @@ import statusUp from "./img/statusUp.png";
 import redTrash from "./img/redTrash.png";
 import tickCircle from "./img/tickCircle.png";
 import DataTable from "react-data-table-component";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import TripleItem3 from "./dropdown/TripleItem3";
 import PartnerModal from "./modal/PartnerModal";
 
@@ -200,6 +201,7 @@ export default function Product() {
           customStyles={customStyles}
           striped
           selectableRows
+          selectableRowsComponent={Checkbox3}
           responsive
         />
       </div>

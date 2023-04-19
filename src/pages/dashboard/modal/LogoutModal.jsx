@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import closeModal from "../img/closeModal.png";
 import danger from "../img/danger.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { logout } from "../../../_redux/thunks";
+import { useDispatch, useSelector } from "react-redux";
 
 const LogoutModal = ({ setLogoutModalOn, setLogoutChoice }) => {
-  const navigate = useNavigate();
+  const { currentUser } = useSelector((state) => state.authReducer);
+
+  const dispatch = useDispatch();
+
+  // const navigate = useNavigate();
+  // navigate("/");
 
   const handleProceedClick = () => {
-    setLogoutModalOn(false);
-    setLogoutChoice(true);
-    navigate("/");
+    if (currentUser) {
+      setLogoutModalOn(false);
+      setLogoutChoice(true);
+      dispatch(logout());
+    }
   };
 
   const handleCancelClick = () => {
