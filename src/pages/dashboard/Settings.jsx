@@ -430,7 +430,29 @@ export default function Settings() {
             </div>
           </TabPanel>
           <TabPanel>
-            <div className=" mt-[40px] w-[199px] h-[36px] normal font-[700] text-[34px] leading-[36px] tracking-[-0.5px] text-[#333333] ">
+            <div className="p-5 mt-6">
+              <div className="font-bold text-[34px] leading-9">
+                Integrations
+              </div>
+              <div className="font-semibold text-sm text-[#8A8B9F] mt-6 leading-4">
+                Make life easier for your company by adding any of these
+                integrations
+              </div>
+              <div className="mt-[90px] flex flex-col items-center justify-center">
+                <img
+                  src={charcoFive}
+                  alt="Charco High Five"
+                  className="w-[311px] h-[429px]"
+                />
+                <p className="mt-[7px] text-sm text-[#8A8B9F] font-bold leading-4">
+                  You do not have any integrations yet!
+                </p>
+                <button className="p-2.5 mt-8 mb-[] font-bold text-xs text-white leading-4 bg-[#8003CD] rounded">
+                  Coming Soon
+                </button>
+              </div>
+            </div>
+            {/* <div className=" mt-[40px] w-[199px] h-[36px] normal font-[700] text-[34px] leading-[36px] tracking-[-0.5px] text-[#333333] ">
               Integrations
             </div>
             <div className="flex justify-between">
@@ -448,7 +470,7 @@ export default function Settings() {
                   <input
                     type="text"
                     placeholder="Search for integrations"
-                    className="outline-none text-xs font-bold w-[128px] placeholder:text-#8A8B9F placeholder:font-[Manrope]"
+                    className="outline-none text-xs font-bold w-[128px] placeholder:text-#8A8B9F placeholder:font-[]"
                   />
                 </div>
               </div>
@@ -926,7 +948,7 @@ export default function Settings() {
               <IntegrationModal
                 setIntegrationModalConnect={setIntegrationModalConnect}
               />
-            )}
+            )} */}
           </TabPanel>
           <TabPanel>
             <div className="flex gap-4 mt-16">
