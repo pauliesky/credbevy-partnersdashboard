@@ -1,11 +1,11 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoadingtoRedirect from "./LoadingtoRedirect";
 
-const UserRoute = ({ children, ...rest }) => {
+const PrivateRoutes = () => {
   const { currentUser } = useSelector((state) => state.authReducer);
-  return currentUser ? <Route {...rest} /> : <LoadingtoRedirect />;
+  return currentUser ? <Outlet /> : <LoadingtoRedirect />;
 };
 
-export default UserRoute;
+export default PrivateRoutes;

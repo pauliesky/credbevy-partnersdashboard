@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Layout from "./components/shared/Layout";
-// import UserRoute from "./pages/components/UserRoute";
+import PrivateRoutes from "./util/PrivateRoutes";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Wallet from "./pages/dashboard/Wallet/Wallet";
 import LoanProducts from "./pages/dashboard/LoanProducts";
@@ -17,16 +17,18 @@ function App() {
     // <Router>
     <Routes>
       <Route exact path="/" element={<Login />} />
-      <Route path="/" element={<Layout />}>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="wallet" element={<Wallet />} />
-        <Route path="loanproducts" element={<LoanProducts />} />
-        <Route path="loanproducts/product" element={<Product />} />
-        <Route path="loanrequest" element={<LoanRequest />} />
-        <Route path="loanrequest/:id" element={<RequestDetails />} />
-        <Route path="loanhistory" element={<LoanHistory />} />
-        <Route path="integrations" element={<Integrations />} />
-        <Route path="settings" element={<Settings />} />
+      <Route element={<PrivateRoutes />}>
+        <Route path="/" element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="wallet" element={<Wallet />} />
+          <Route path="loanproducts" element={<LoanProducts />} />
+          <Route path="loanproducts/product" element={<Product />} />
+          <Route path="loanrequest" element={<LoanRequest />} />
+          <Route path="loanrequest/:id" element={<RequestDetails />} />
+          <Route path="loanhistory" element={<LoanHistory />} />
+          <Route path="integrations" element={<Integrations />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Route>
     </Routes>
     // </Router>
