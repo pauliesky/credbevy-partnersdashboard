@@ -29,7 +29,7 @@ export const login = (email, password) => {
 export const logout = () => {
   return async (dispatch) => {
     try {
-      const response = await fetch('http://credbevy-env.eba-nsfp43cc.us-east-1.elasticbeanstalk.com/api/partner/logout', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -39,7 +39,7 @@ export const logout = () => {
       }
 
       const data = await response.json();
-      console.log('logged in');
+      console.log('logged out');
       dispatch(logoutSuccess());
 
       console.log(response);

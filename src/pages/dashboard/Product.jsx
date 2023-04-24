@@ -188,12 +188,10 @@ export default function Product() {
               48 products
             </p>
           </div>
-          <div className="flex gap-2.5 border p-2 border-black rounded">
+          <button className="flex gap-2.5 border p-2 border-black rounded">
             <p className="text-xs font-bold">Bulk actions</p>
-            <button className="">
-              <img src={arrowDown} alt="arrow down" className="w-4 h-4" />
-            </button>
-          </div>
+            <img src={arrowDown} alt="arrow down" className="w-4 h-4" />
+          </button>
         </div>
         <DataTable
           columns={columns}

@@ -9,6 +9,7 @@ import whiteCircle from "./img/whiteCircle.png";
 import whiteClose from "./img/whiteClose.png";
 import DeclineModal from "./modal/DeclineModal";
 import AcceptModal from "./modal/AcceptModal";
+// import CreditScore from "./creditscore/CreditScore";
 
 const RequestDetails = ({ RequestDetails }) => {
   const [acceptModalOn, setAcceptModalOn] = useState(false);
@@ -286,7 +287,7 @@ const RequestDetails = ({ RequestDetails }) => {
               />
             </div>
           </TabPanel>
-          <TabPanel>Credit Score</TabPanel>
+          <TabPanel>{/* <CreditScore /> */}</TabPanel>
         </Tabs>
       </div>
       {acceptModalOn && (
