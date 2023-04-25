@@ -13,6 +13,7 @@ import closeModal from "./img/closeModal.png";
 import AcceptModal from "./modal/AcceptModal";
 import DeclineModal from "./modal/DeclineModal";
 import { useNavigate } from "react-router-dom";
+import Checkbox3 from "./checkbox3/Checkbox3";
 
 export default function LoanRequest() {
   const navigate = useNavigate();
@@ -117,6 +118,10 @@ export default function LoanRequest() {
       width: "140px",
     },
   ];
+
+  const handleRowClick = (row) => {
+    handleViewDetails(row);
+  };
 
   const data = [
     {
@@ -223,8 +228,12 @@ export default function LoanRequest() {
           columns={columns}
           data={data}
           customStyles={customStyles}
+          onRowClicked={handleRowClick}
+          pointerOnHover={true}
+          highlightOnHover={true}
           striped
           selectableRows
+          selectableRowsComponent={Checkbox3}
           responsive
         />
       </div>

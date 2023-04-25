@@ -5,15 +5,15 @@ import apple from "../img/apple.png";
 import paypal from "../img/paypal.png";
 import ellipsePayment from "../img/ellipsePayment.png";
 
-const FundModal = ({ setModalOn, setChoice }) => {
+const FundModal = ({ setFundModalOn, setFundChoice }) => {
   const handleProceedClick = () => {
-    setChoice(true);
-    setModalOn(false);
+    setFundChoice(true);
+    setFundModalOn(false);
   };
 
   const handleCancelClick = () => {
-    setChoice(false);
-    setModalOn(false);
+    setFundChoice(false);
+    setFundModalOn(false);
   };
 
   return (

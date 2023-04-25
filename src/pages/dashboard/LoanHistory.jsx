@@ -5,6 +5,7 @@ import eye from "../login/img/eye.png";
 import closeCircle from "./img/closeCircle.png";
 import download from "./img/download.png";
 import infoCircle from "./img/infoCircle.png";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import DataTable from "react-data-table-component";
 import TripleItem1 from "./dropdown/TripleItem1";
 
@@ -286,14 +287,14 @@ export default function LoanRequest() {
                 </div>
               </div>
 
-              <div className="flex gap-2.5 border p-2 border-black rounded">
+              <button
+                className="flex gap-2.5 border p-2 border-black rounded"
+                onClick={() => setIsOpenBulk((prev) => !prev)}
+              >
                 <p className="text-xs font-bold">Bulk actions</p>
-                <button
-                  className=""
-                  onClick={() => setIsOpenBulk((prev) => !prev)}
-                >
-                  <img src={arrowDown} alt="arrow-down" className="w-4 h-4" />
-                </button>
+
+                <img src={arrowDown} alt="arrow-down" className="w-4 h-4" />
+
                 {isOpenBulk && (
                   <div className="">
                     <div
@@ -321,7 +322,7 @@ export default function LoanRequest() {
                     </div>
                   </div>
                 )}
-              </div>
+              </button>
             </div>
           </div>
           <DataTable
@@ -330,6 +331,7 @@ export default function LoanRequest() {
             customStyles={customStyles}
             striped
             selectableRows
+            selectableRowsComponent={Checkbox3}
             responsive
           />
         </div>

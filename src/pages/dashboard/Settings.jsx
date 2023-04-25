@@ -13,6 +13,7 @@ import DeleteModal from "./modal/DeleteModal";
 import UserRoles from "./UserRoles.jsx";
 import company from "../../components/shared/img/company.png";
 import charcoFive from "./img/charcoFive.png";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import Switch from "./toggle/Switch";
 import twitterIcon from "./img/twitter.png";
 import infoIcon from "./img/infoCircle.png";
@@ -38,7 +39,6 @@ export default function Settings() {
 
   const clicked2 = () => {
     setDeleteModalOn(true);
-    console.log("grow");
   };
 
   const addPaymentHandler = () => {
@@ -1276,6 +1276,7 @@ export default function Settings() {
                 customStyles={customStyles}
                 striped
                 selectableRows
+                selectableRowsComponent={Checkbox3}
                 responsive
               />
             </div>

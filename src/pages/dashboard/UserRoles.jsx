@@ -6,6 +6,7 @@ import arrowWhite from "./img/arrowWhite.png";
 import add from "./img/add.png";
 import DataTable from "react-data-table-component";
 import DoubleItem2 from "./dropdown/DoubleItem2";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import RoleModal from "./modal/RoleModal";
 import DeleteModal from "./modal/DeleteModal";
 
@@ -189,6 +190,7 @@ const UserRoles = () => {
           customStyles={customStyles}
           striped
           selectableRows
+          selectableRowsComponent={Checkbox3}
           responsive
         />
       </div>

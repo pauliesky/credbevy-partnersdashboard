@@ -9,6 +9,7 @@ import whiteCircle from "./img/whiteCircle.png";
 import whiteClose from "./img/whiteClose.png";
 import DeclineModal from "./modal/DeclineModal";
 import AcceptModal from "./modal/AcceptModal";
+import CreditScore from "./creditscore/CreditScore";
 
 const RequestDetails = ({ RequestDetails }) => {
   const [acceptModalOn, setAcceptModalOn] = useState(false);
@@ -162,8 +163,6 @@ const RequestDetails = ({ RequestDetails }) => {
           <img src={whiteCircle} alt="tick icon" className="w-6 h-6" />
           <p className="text-xs font-bold text-white">Accept Request</p>
         </button>
-        <button className=""></button>
-        <button className=""></button>
       </div>
 
       <div className="min-h-[408px] border border-solid border-[#E5EAEF] rounded mb-44">
@@ -288,7 +287,9 @@ const RequestDetails = ({ RequestDetails }) => {
               />
             </div>
           </TabPanel>
-          <TabPanel>Credit Score</TabPanel>
+          <TabPanel>
+            <CreditScore />
+          </TabPanel>
         </Tabs>
       </div>
       {acceptModalOn && (

@@ -6,6 +6,7 @@ import statusUp from "./img/statusUp.png";
 import redTrash from "./img/redTrash.png";
 import tickCircle from "./img/tickCircle.png";
 import DataTable from "react-data-table-component";
+import Checkbox3 from "./checkbox3/Checkbox3";
 import TripleItem3 from "./dropdown/TripleItem3";
 import PartnerModal from "./modal/PartnerModal";
 
@@ -187,12 +188,10 @@ export default function Product() {
               48 products
             </p>
           </div>
-          <div className="flex gap-2.5 border p-2 border-black rounded">
+          <button className="flex gap-2.5 border p-2 border-black rounded">
             <p className="text-xs font-bold">Bulk actions</p>
-            <button className="">
-              <img src={arrowDown} alt="arrow down" className="w-4 h-4" />
-            </button>
-          </div>
+            <img src={arrowDown} alt="arrow down" className="w-4 h-4" />
+          </button>
         </div>
         <DataTable
           columns={columns}
@@ -200,6 +199,7 @@ export default function Product() {
           customStyles={customStyles}
           striped
           selectableRows
+          selectableRowsComponent={Checkbox3}
           responsive
         />
       </div>
