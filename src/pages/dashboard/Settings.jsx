@@ -75,7 +75,7 @@ export default function Settings() {
     rows: {
       style: {
         minHeight: "73px",
-        paddingLeft: "16px",
+        paddingLeft: "8px",
       },
     },
 
@@ -84,7 +84,7 @@ export default function Settings() {
         fontWeight: 700,
         fontSize: "0.875rem",
         color: "#8A8B9F",
-        paddingLeft: "30px",
+        paddingLeft: "25px",
       },
     },
   };
@@ -1533,7 +1533,7 @@ export default function Settings() {
           </TabPanel>
           <TabPanel>
             <div className="border border-[#E5EAEF] rounded-lg h-[784px] mt-7 mb-20">
-              <div className="flex items-center justify-between text-xl font-bold h-[67px] leading-[27.32px] border-b border-solid border-[#E5EAEF] px-8">
+              <div className="flex items-center justify-between text-xl font-bold h-[67px] leading-[27.32px] border-b border-solid border-[#E5EAEF] px-6">
                 <div className="flex items-center justify-center gap-[0.9375rem]">
                   <p className="text-sm text-[#8A8B9F] font-semibold">
                     New Logs
