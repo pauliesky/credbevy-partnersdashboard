@@ -17,6 +17,10 @@ import Switch from "./toggle/Switch";
 import twitterIcon from "./img/twitter.png";
 import infoIcon from "./img/infoCircle.png";
 import IntegrationModal from "./modal/IntegrationModal";
+import cardLogo from "./img/cardLogo.png";
+import purpleTick from "./img/purpleTick.png";
+import purpleAdd from "./img/purpleAdd.png";
+import PaymentModal from "./modal/AcceptModal";
 
 export default function Settings() {
   const [userModalOn, setUserModalOn] = useState(false);
@@ -25,6 +29,7 @@ export default function Settings() {
   const [deleteModalOn, setDeleteModalOn] = useState(false);
   const [deleteChoice, setDeleteChoice] = useState(false);
 
+  const [paymentModal, setPaymentModal] = useState(false);
   const [integrationModalConnect, setIntegrationModalConnect] = useState(false);
 
   const clicked1 = () => {
@@ -34,6 +39,10 @@ export default function Settings() {
   const clicked2 = () => {
     setDeleteModalOn(true);
     console.log("grow");
+  };
+
+  const addPaymentHandler = () => {
+    setPaymentModal(true);
   };
 
   const handleProceedClick = () => {
@@ -58,6 +67,24 @@ export default function Settings() {
         fontWeight: 700,
         fontSize: "0.875rem",
         color: "#8A8B9F",
+      },
+    },
+  };
+
+  const log_customStyles = {
+    rows: {
+      style: {
+        minHeight: "73px",
+        paddingLeft: "16px",
+      },
+    },
+
+    headCells: {
+      style: {
+        fontWeight: 700,
+        fontSize: "0.875rem",
+        color: "#8A8B9F",
+        paddingLeft: "30px",
       },
     },
   };
@@ -116,6 +143,65 @@ export default function Settings() {
         </div>
       ),
       width: "245px",
+    },
+  ];
+
+  const log_columns = [
+    {
+      name: "Date and Time",
+      selector: (row) => (
+        <div className="flex gap-4 items-center justify-center ml-0">
+          <div className="text-sm text-[#333333] font-semibold">
+            {row.dateAndTime}
+          </div>
+        </div>
+      ),
+      width: "178px",
+    },
+    {
+      name: "User",
+      selector: (row) => (
+        <div className="text-sm  text-[#333333] font-semibold">{row.user}</div>
+      ),
+      width: "158px",
+    },
+    {
+      name: "Description",
+      selector: (row) => (
+        <div className="text-sm  text-[#333333] font-semibold">
+          {row.description}
+        </div>
+      ),
+      width: "152px",
+    },
+    {
+      name: "I.P Address",
+      selector: (row) => (
+        <div className="flex gap-8">
+          <div className="text-sm  text-[#333333] font-semibold">
+            {row.ipAddress}
+          </div>
+        </div>
+      ),
+      width: "122px",
+    },
+    {
+      name: "User Agent",
+      selector: (row) => (
+        <div className="text-[13px] leading-6 normal tracking-[-0.5px] font-[600] text-[#333333]">
+          {row.userAgent}
+        </div>
+      ),
+      width: "275px",
+    },
+    {
+      name: "Status",
+      selector: (row) => (
+        <div className="flex gap-8">
+          <div className="text-sm font-semibold">{row.status}</div>
+        </div>
+      ),
+      width: "135px",
     },
   ];
 
@@ -185,6 +271,161 @@ export default function Settings() {
       permission: "Contributors",
     },
   ];
+
+  const logs_data = [
+    {
+      id: 1,
+      dateAndTime: "2023-04-01,10:00:00",
+      user: "TimilehinOripeloye",
+      description: "Login",
+      ipAddress: "192.168.1.10",
+      userAgent: (
+        <div>
+          Mozilla/5.0 (WindowsNT10.0;Win64;x64)
+          <br />
+          AppleWebKit/537.36(KHTML,like Gecko)
+        </div>
+      ),
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      dateAndTime: "2023-04-01,10:00:00",
+      user: "TimilehinOripeloye",
+      description: "Transfer",
+      ipAddress: "192.168.1.12",
+      userAgent: "Python Requests Library",
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 3,
+      dateAndTime: "2023-04-03,09:45:00",
+      user: "TimilehinOripeloye",
+      description: "Change Password ",
+      ipAddress: "192.168.1.15",
+      userAgent: (
+        <div>
+          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0)
+          <br />
+          AppleWebKit/537.36 (KHTML, like Gecko)
+        </div>
+      ),
+      status: (
+        <div className="flex flex-row gap-1 bg-[#FFA39E] rounded-[30px] h-[32px] w-[71px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#F5222D]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Failed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      dateAndTime: "2023-04-01,10:00:00",
+      user: "TimilehinOripeloye",
+      description: "Transfer",
+      ipAddress: "192.168.1.12",
+      userAgent: "Python Requests Library",
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 5,
+      dateAndTime: "2023-04-03,09:45:00",
+      user: "TimilehinOripeloye",
+      description: "Change Password ",
+      ipAddress: "192.168.1.15",
+      userAgent: (
+        <div>
+          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0)
+          <br />
+          AppleWebKit/537.36 (KHTML, like Gecko)
+        </div>
+      ),
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 6,
+      dateAndTime: "2023-04-01,10:00:00",
+      user: "TimilehinOripeloye",
+      description: "Transfer",
+      ipAddress: "192.168.1.12",
+      userAgent: "Python Requests Library",
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 7,
+      dateAndTime: "2023-04-03,09:45:00",
+      user: "TimilehinOripeloye",
+      description: "Change Password ",
+      ipAddress: "192.168.1.15",
+      userAgent: (
+        <div>
+          Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0)
+          <br />
+          AppleWebKit/537.36 (KHTML, like Gecko)
+        </div>
+      ),
+      status: (
+        <div className="flex flex-row gap-1 bg-[#FFA39E] rounded-[30px] h-[32px] w-[71px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#F5222D]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Failed
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 8,
+      dateAndTime: "2023-04-01,10:00:00",
+      user: "TimilehinOripeloye",
+      description: "Transfer",
+      ipAddress: "192.168.1.12",
+      userAgent: "Python Requests Library",
+      status: (
+        <div className="flex flex-row gap-1 bg-[#C2FED3] rounded-[30px] h-[32px] w-[94px] items-center py-1 px-4 ">
+          <span className="h-[6px] w-[6px] rounded-full bg-[#42BE65]"></span>
+          <div className="text-[#333333] text-[10px] normal font-[600]">
+            Completed
+          </div>
+        </div>
+      ),
+    },
+  ];
   return (
     <div className=" p-5 mt-6">
       <div className="  font-bold text-[34px] leading-9 mb-8">Settings</div>
@@ -195,6 +436,7 @@ export default function Settings() {
             <Tab className={"major-tab"}>Notifications</Tab>
             <Tab className={"major-tab"}>Integrations</Tab>
             <Tab className={"major-tab"}>User Management</Tab>
+            <Tab className={"major-tab"}>Payment</Tab>
             <Tab className={"major-tab"}>Group Management</Tab>
             <Tab className={"major-tab"}>User Roles</Tab>
             <Tab className={"major-tab"}>Security & Password</Tab>
@@ -1039,16 +1281,287 @@ export default function Settings() {
             </div>
           </TabPanel>
           <TabPanel>
+            <div className="flex justify-between mt-[114px] flex-row">
+              <span>
+                <span className="flex gap-1 flex-row">
+                  <span className=" normal font-[700] text-[#333333] text-[14px] leading-5 ">
+                    Card details
+                  </span>
+                  <span className="normal font-[700] text-[14px] text-[#8003CD] ">
+                    *
+                  </span>
+                </span>
+                <span className="normal text-[#8A8B9F] font-[700] text-[12px] ">
+                  Select default payment method
+                </span>
+              </span>
+              <div>
+                <div className=" py-5 px-6 border border-[1px solid #8003CD] rounded-[4px] flex justify-between w-[448px] h-[107px] bg-[#FFFFFF]">
+                  <div className="flex gap-2">
+                    <img
+                      className="h-[15px] w-[24.3px]"
+                      alt="cardlogo"
+                      src={cardLogo}
+                    ></img>
+                    <div>
+                      <p className="normal font-[700] text-[12px] text-[#000000] leading-5">
+                        Mastercard ending in 1234
+                      </p>
+                      <p className="normal font-[400] text-[12px] text-[ #8A8B9F]">
+                        Expiry 04/20/2023
+                      </p>
+                      <span className="flex mt-2 gap-5">
+                        <p className="normal font-[600] text-[10px] leading-5 text-[#000000]">
+                          Set as default
+                        </p>
+                        <p className="text-[#8003CD] text-[10px] normal leading-5 font-[700]  ">
+                          Edit
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    className="h-[13px] w-[13px]"
+                    alt="check"
+                    src={purpleTick}
+                  ></img>
+                </div>
+                <div className=" mt-4 py-5 px-6 border border-[1px solid #8003CD] rounded-[4px] flex justify-between w-[448px] h-[107px] bg-[#FFFFFF]">
+                  <div className="flex gap-2">
+                    <img
+                      className="h-[15px] w-[24.3px]"
+                      alt="cardlogo"
+                      src={cardLogo}
+                    ></img>
+                    <div>
+                      <p className="normal font-[700] text-[12px] text-[#000000] leading-5">
+                        Visa ending in 1234
+                      </p>
+                      <p className="normal font-[400] text-[12px] text-[ #8A8B9F]">
+                        Expiry 04/20/2023
+                      </p>
+                      <span className="flex mt-2 gap-5">
+                        <p className="normal font-[600] text-[10px] leading-5 text-[#000000]">
+                          Set as default
+                        </p>
+                        <p className="text-[#8003CD] text-[10px] normal leading-5 font-[700]  ">
+                          Edit
+                        </p>
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    className="h-[13px] w-[13px]"
+                    alt="check"
+                    src={purpleTick}
+                  ></img>
+                </div>
+                <div
+                  // onClick={addPaymentHandler}
+                  className="mt-8 flex items-center gap-1"
+                >
+                  <img alt="add" src={purpleAdd}></img>
+                  <p className="normal text-[12px] font-[700] leading-3 tracking-[-0.5px] text-[#8003CD]">
+                    Add new payment method
+                  </p>
+                </div>
+              </div>
+              {paymentModal && (
+                <PaymentModal setAcceptModalOn={setPaymentModal} />
+              )}
+            </div>
+          </TabPanel>
+          <TabPanel>
             <h2>Group Management</h2>
           </TabPanel>
           <TabPanel>
             <UserRoles />
           </TabPanel>
           <TabPanel>
-            <h2>Security & Password</h2>
+            <div>
+              <div className="flex justify-end mt-[34px] gap-8">
+                <button
+                  className="px-[34px] py-2.5 rounded text-xs font-bold border-[0.5px] border-solid border-[#868e96] bg-white"
+                  onClick={handleCancelClick}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="px-[34px] py-2.5 rounded text-xs font-bold bg-[#8003CD] text-white"
+                  onClick={handleProceedClick}
+                >
+                  Save
+                </button>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-[700] text-[16px] leading-6 text-[#333333] tracking-[-0.5px] normal">
+                  Password
+                </span>
+                <span className="mt-1 normal font-[700] text-[12px] leading-[18px] tracking-[-0.5px] text-[#8A8B9F]">
+                  Enter your current password to change your password
+                </span>
+              </div>
+              <form className="mt-10">
+                <div className="flex gap-[238px]">
+                  <label className="text-sm font-bold leading-[19.12px]">
+                    Current Password
+                    <span className="text-sm font-bold leading-[19.12px] text-[#8003CD]">
+                      *
+                    </span>
+                  </label>
+                  <div className="">
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        placeholder="Current Password"
+                        className="text-xs font-semibold leading-5 w-[448px] h-[35px] rounded py-2.5 px-4 outline-none border border-solid border-[#DCDCE4]"
+                      />
+                      <small className="font-medium text-[0.625rem] leading-[0.875rem] text-[#8A8B9F]">
+                        Enter your current password
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex mt-14 gap-[260px]">
+                  <label className="text-sm font-bold leading-[19.12px]">
+                    New Password
+                    <span className="text-sm font-bold leading-[19.12px] text-[#8003CD]">
+                      *
+                    </span>
+                  </label>
+                  <div className="">
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        placeholder="New Password"
+                        className="text-xs font-semibold leading-5 w-[448px] h-[35px] rounded py-2.5 px-4 outline-none border border-solid border-[#DCDCE4]"
+                      />
+                      <small className="font-medium text-[0.625rem] leading-[0.875rem] text-[#8A8B9F]">
+                        Enter new password
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex mt-14 gap-[205px]">
+                  <label className="text-sm font-bold leading-[19.12px]">
+                    Confirm New Password
+                    <span className="text-sm font-bold leading-[19.12px] text-[#8003CD]">
+                      *
+                    </span>
+                  </label>
+                  <div className="">
+                    <div className="flex flex-col">
+                      <input
+                        type="text"
+                        placeholder="Confirm New Password"
+                        className="text-xs font-semibold leading-5 w-[448px] h-[35px] rounded py-2.5 px-4 outline-none border border-solid border-[#DCDCE4]"
+                      />
+                      <small className="font-medium text-[0.625rem] leading-[0.875rem] text-[#8A8B9F]">
+                        Confirm new password
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div className="flex flex-col mt-16">
+                <span className="font-[700] text-[16px] leading-6 text-[#333333] tracking-[-0.5px] normal">
+                  Security
+                </span>
+                <span className="mt-1 normal font-[700] text-[12px] leading-[18px] tracking-[-0.5px] text-[#8A8B9F]">
+                  Improve security settings of your account
+                </span>
+              </div>
+              <div className="flex mt-[37px] justify-between">
+                <div className="">
+                  <p className="font-bold text-sm normal text-[#333333] text-[14px] leading-6">
+                    2-Step Verification
+                  </p>
+                  <p className="font-bold text-xs text-[#8A8B9F] leading-4">
+                    Make your account extra secure . Along with the password,
+                    you will need a code
+                  </p>
+                </div>
+                <div className="mr-[218px] mt-1.5">
+                  <Switch />
+                </div>
+              </div>
+              <div>
+                <div className="flex gap-1 mt-6 flex-row">
+                  <span className="text-[14px] normal font-[700] text-[#8003CD]">
+                    *
+                  </span>
+                  <p className="italics w-[804px] font-[500] font-[DM Sans]  text-[12px] leading-[18px] tracking-[-0.5px] text-[#8A8B9F]">
+                    If you encounter any security issues or suspect unauthorized
+                    access to your account, please report it to our customer
+                    support or security team immediately. Provide as much detail
+                    as possible, and we'll investigate promptly. We may need to
+                    temporarily disable your account while we investigate.
+                    Contact us with any questions or concerns. Thanks for
+                    helping keep our platform secure!
+                  </p>
+                </div>
+                <div className="flex gap-1 mt-6 flex-row">
+                  <span className="text-[14px] normal font-[700] text-[#8003CD]">
+                    *
+                  </span>
+                  <p className="italics w-[804px] font-[500] font-[DM Sans]  text-[12px] leading-[18px] tracking-[-0.5px] text-[#8A8B9F]">
+                    We take the security and privacy of your data seriously,
+                    including when it's shared with third-party services. We
+                    only share necessary information, and have strict policies
+                    to ensure your data is protected and used only for the
+                    intended purpose. If you have questions or concerns about
+                    third-party access, please contact our customer support
+                    team.
+                  </p>
+                </div>
+                <div className="flex gap-1 mt-6 flex-row">
+                  <span className="text-[14px] normal font-[700] text-[#8003CD]">
+                    *
+                  </span>
+                  <p className="italics w-[804px] font-[500] font-[DM Sans]  text-[12px] leading-[18px] tracking-[-0.5px] text-[#8A8B9F]">
+                    Use a secure device and browser when accessing our platform.
+                    Keep your operating system and browser up-to-date, use
+                    strong and unique passwords, and enable two-factor
+                    authentication. Avoid using public or shared devices to
+                    access your account. Contact our customer support team with
+                    any questions or concerns about device and browser security.
+                  </p>
+                </div>
+              </div>
+            </div>
           </TabPanel>
           <TabPanel>
-            <h2>Logs</h2>
+            <div className="border border-[#E5EAEF] rounded-lg h-[784px] mt-7 mb-20">
+              <div className="flex items-center justify-between text-xl font-bold h-[67px] leading-[27.32px] border-b border-solid border-[#E5EAEF] px-8">
+                <div className="flex items-center justify-center gap-[0.9375rem]">
+                  <p className="text-sm text-[#8A8B9F] font-semibold">
+                    New Logs
+                  </p>
+                  <p className="text-[0.625rem] font-bold px-2.5 py-px rounded-[1.125rem] bg-[#ECECEC]">
+                    48 Logs
+                  </p>
+                </div>
+                <div className="flex gap-9">
+                  <div className="flex gap-2.5 items-center justify-center border px-2.5 py-2 border-black bg-[#333333] rounded">
+                    <p className="text-xs font-bold text-white">Download</p>
+                    <button className="">
+                      <img
+                        src={arrowWhite}
+                        alt="arrow down"
+                        className="w-4 h-4"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <DataTable
+                columns={log_columns}
+                data={logs_data}
+                customStyles={log_customStyles}
+                striped
+                responsive
+              />
+            </div>
           </TabPanel>
         </Tabs>
       </div>
