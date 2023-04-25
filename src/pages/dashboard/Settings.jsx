@@ -34,7 +34,6 @@ export default function Settings() {
 
   const clicked2 = () => {
     setDeleteModalOn(true);
-    console.log("grow");
   };
 
   const handleProceedClick = () => {

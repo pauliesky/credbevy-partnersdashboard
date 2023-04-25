@@ -15,7 +15,8 @@ export const login = (email, password) => {
 
       const data = await response.json();
       console.log('logged in');
-      dispatch(loginSuccess(data.partner));
+
+      dispatch(loginSuccess(data.access_token));
 
       console.log(response);
       console.log(data);
@@ -39,13 +40,39 @@ export const logout = () => {
       }
 
       const data = await response.json();
-      console.log('logged out');
       dispatch(logoutSuccess());
 
       console.log(response);
       console.log(data);
     } catch (error) {
       dispatch(logoutFailure(error.message))
+      console.log(error)
+    }
+  }
+};
+
+export const createUser = (firstName, lastName,) => {
+  return async (dispatch) => {
+    try {
+      const response = await fetch('http://credbevy-env.eba-nsfp43cc.us-east-1.elasticbeanstalk.com/api/partner/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+
+      const data = await response.json();
+      console.log('logged in');
+
+      dispatch(loginSuccess(data.access_token));
+
+      console.log(response);
+      console.log(data);
+    } catch (error) {
+      dispatch(loginFailure(error.message))
       console.log(error)
     }
   }

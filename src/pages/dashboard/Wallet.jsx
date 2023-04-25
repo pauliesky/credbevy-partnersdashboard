@@ -11,21 +11,21 @@ import LoanDisbursed from "./LoanDisbursed";
 import closeModal from "./img/closeModal.png";
 
 export default function Wallet() {
-  const [modalOn, setModalOn] = useState(false);
-  const [choice, setChoice] = useState(false);
+  const [fundModalOn, setFundModalOn] = useState(false);
+  const [fundChoice, setFundChoice] = useState(false);
 
   const clicked = () => {
-    setModalOn(true);
+    setFundModalOn(true);
   };
 
   const handleProceedClick = () => {
-    setChoice(true);
-    setModalOn(false);
+    setFundChoice(true);
+    setFundModalOn(false);
   };
 
   const handleCancelClick = () => {
-    setChoice(false);
-    setModalOn(false);
+    setFundChoice(false);
+    setFundModalOn(false);
   };
 
   const LoanDis = <LoanDisbursed />;
@@ -49,7 +49,7 @@ export default function Wallet() {
               <img src={add} alt="add icon" className="w-4 h-4" />
               <p className="font-bold text-[0.625rem]">FundWallet</p>
             </button>
-            {choice && (
+            {fundChoice && (
               <div className="p">
                 <div
                   className="relative z-10"
@@ -138,7 +138,10 @@ export default function Wallet() {
               </div>
             )}
             {modalOn && (
-              <FundModal setModalOn={setModalOn} setChoice={setChoice} />
+              <FundModal
+                setFundModalOn={setFundModalOn}
+                setFundChoice={setFundChoice}
+              />
             )}
             {}
             <div
