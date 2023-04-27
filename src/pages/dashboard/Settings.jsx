@@ -161,7 +161,7 @@ export default function Settings() {
     {
       name: "User",
       selector: (row) => (
-        <div className="text-sm  text-[#333333] font-semibold">{row.user}</div>
+        <div className="text-sm   font-semibold">{row.user}</div>
       ),
       width: "158px",
     },
