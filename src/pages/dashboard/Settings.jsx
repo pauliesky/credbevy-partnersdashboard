@@ -1482,7 +1482,9 @@ export default function Settings() {
                     you will need a code
                   </p>
                 </div>
-                <div className="mr-[218px] mt-1.5">
+                <div 
+                className="mr-[218px] mt-1.5"
+                >
                   <Switch />
                 </div>
               </div>
