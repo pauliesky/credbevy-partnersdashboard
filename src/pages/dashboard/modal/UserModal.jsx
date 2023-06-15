@@ -2,8 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import closeModal from "../img/closeModal.png";
 import clear from "../img/clear.png";
 import caret from "../img/caret.png";
+import { AiFillCaretDown } from "react-icons/ai";
+import Caret from "../dropdown/Caret";
 import SuperAdmin from "../role/SuperAdmin";
 import Contributor from "../role/Contributor";
+import Select, { components } from "react-select";
+import { listRoles } from "../../../_redux/thunks";
+import { useSelector, useDispatch } from "react-redux";
+// import { GetStyles } from "react-select";
 
 export default function UserModal({ setUserModalOn, setUserChoice }) {
   const handleProceedClick = () => {
@@ -21,8 +27,21 @@ export default function UserModal({ setUserModalOn, setUserChoice }) {
   const [adminOn, setAdminOn] = useState(false);
   const [contributorOn, setContributorOn] = useState(false);
 
+  const [selects, setSelects] = useState();
+
+  const dispatch = useDispatch();
+
+  const { roles } = useSelector((state) => state.roleReducer);
+
+  // console.log({ roles });
+  const handleRoles = () => {
+    dispatch(listRoles());
+    console.log("roles");
+  };
+
   const handleAdmin = () => {
     setAdminOn(true);
+    // setRolesOn(true);
   };
 
   const handleContributor = () => {
@@ -34,21 +53,56 @@ export default function UserModal({ setUserModalOn, setUserChoice }) {
     setContributorOn(false);
   };
 
-  const dropdownRef = useRef();
+  const options = [
+    { value: "", label: "grace" },
+    { value: "", label: "love" },
+  ];
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setRolesOn(false);
-      }
-    };
+  // const getStyles = {
+  //   control: (base, state) => ({
+  //     ...base,
+  //     borderColor: state.isFocused ? "#00B8D9" : "#ccc",
+  //     boxShadow: state.isFocused ? "0 0 0 1px #00B8D9" : null,
+  //     "&:hover": {
+  //       borderColor: state.isFocused ? "#00B8D9" : "#ccc",
+  //     },
+  //   }),
+  //   dropdownIndicator: (base, state) => ({
+  //     ...base,
+  //     color: state.isFocused ? "#00B8D9" : "#ccc",
+  //     "&:hover": {
+  //       color: state.isFocused ? "#00B8D9" : "#ccc",
+  //     },
+  //   }),
+  // };
 
-    document.addEventListener("click", handleClickOutside);
+  const DropdownIndicator = (props) => {
+    return (
+      <components.DropdownIndicator {...props}>
+        <AiFillCaretDown />
+      </components.DropdownIndicator>
+    );
+  };
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [dropdownRef]);
+  const customComponents = {
+    DropdownIndicator,
+  };
+
+  // const dropdownRef = useRef();
+
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setRolesOn(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("click", handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, [dropdownRef]);
 
   return (
     <div className="">
@@ -177,74 +231,35 @@ export default function UserModal({ setUserModalOn, setUserChoice }) {
                         </div>
                       </div>
                     </div>
-                  </form>
-                </div>
-
-                <div className="ml-8 mt-[34px]" ref={dropdownRef}>
-                  <p className="text-xs font-bold leading-4">User’s roles</p>
-                  <div className="relative w-[375px] h-[40px] border border-[#DCDCE4] rounded">
-                    <div className=""></div>
-                    <div className="absolute flex items-center justify-center gap-[4.8px] top-[12px] right-[12px]">
-                      <button className="" onClick={handleCancelRole}>
-                        <img src={clear} alt="clear" className="w-2.5 h-2.5" />
-                      </button>
-                      <button className="" onClick={() => setRolesOn(!rolesOn)}>
-                        <img src={caret} alt="dropdown" className="w-4 h-4" />
-                      </button>
+                    <div className="ml-8 mt-[34px]">
+                      <p className="text-xs font-bold leading-4">
+                        User’s roles
+                      </p>
+                      <Select
+                        isMulti
+                        options={options}
+                        components={customComponents}
+                        onMenuOpen={handleRoles}
+                      />
+                      <p className="font-normal text-xs text-[#8A8B9F]">
+                        A user can have one or several roles
+                      </p>
                     </div>
-
-                    <div className="flex">
-                      {adminOn && <SuperAdmin setAdminOn={setAdminOn} />}
-
-                      {contributorOn && (
-                        <Contributor setContributorOn={setContributorOn} />
-                      )}
-                    </div>
-
-                    {rolesOn && (
-                      <div
-                        className="absolute z-10 flex flex-col items-center justify-between h-[135px] w-[140px] top-[28px] right-[2px] bg-white  rounded"
-                        style={{
-                          boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.12)",
-                        }}
+                    <div className="flex h-14 bg-[#F6F6F6] px-8 py-4 justify-between mt-[73px] justify-center items-center">
+                      <button
+                        className="p-2 rounded text-xs font-bold border-[0.5px] border-solid border-[#DCDCE4] bg-white"
+                        onClick={handleCancelClick}
                       >
-                        <button
-                          className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF]"
-                          onClick={handleAdmin}
-                        >
-                          <p className="justify-self-end">Super Admin</p>
-                        </button>
-
-                        <button
-                          className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF]"
-                          onClick={handleContributor}
-                        >
-                          <p className="justify-self-end">Contributor</p>
-                        </button>
-                        <button className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF]">
-                          <p className="justify-self-end">Agent</p>
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                  <p className="font-normal text-xs text-[#8A8B9F]">
-                    A user can have one or several roles
-                  </p>
-                </div>
-
-                <div className="flex h-14 bg-[#F6F6F6] px-8 py-4 justify-between mt-[73px] justify-center items-center">
-                  <button
-                    className="p-2 rounded text-xs font-bold border-[0.5px] border-solid border-[#DCDCE4] bg-white"
-                    onClick={handleCancelClick}
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    className="p-2 rounded text-xs font-bold bg-[#8003CD] text-white"
-                    onClick={handleProceedClick}
-                  >
-                    Invite user
-                  </button>
+                        Cancel
+                      </button>
+                      <button
+                        className="p-2 rounded text-xs font-bold bg-[#8003CD] text-white"
+                        onClick={handleProceedClick}
+                      >
+                        Invite user
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -253,4 +268,135 @@ export default function UserModal({ setUserModalOn, setUserChoice }) {
       </div>
     </div>
   );
+}
+
+{
+  /* <div
+className="relative w-[375px] h-[40px] border border-[#DCDCE4] rounded"
+value={selects}
+>
+<div className=""></div>
+<div className="absolute flex items-center justify-center gap-[4.8px] top-[12px] right-[12px]">
+  <button className="" onClick={handleCancelRole}>
+    <img
+      src={clear}
+      alt="clear"
+      className="w-2.5 h-2.5"
+    />
+  </button>
+  <button className="" onClick={handleRoles}>
+    <img src={caret} alt="caret" className="w-4 h-4" />
+  </button>
+</div>
+
+<div className="flex">
+  {adminOn && (
+    <SuperAdmin
+      setAdminOn={setAdminOn}
+      text={selects}
+    />
+  )}
+
+  {contributorOn && (
+    <Contributor setContributorOn={setContributorOn} />
+  )}
+</div>
+
+{rolesOn && (
+  <ul
+    className="absolute z-10 flex flex-col items-center w-[140px] top-[28px] right-[2px] bg-white  rounded"
+    style={{
+      boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.12)",
+    }}
+  >
+    <li
+      className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF] cursor-pointer"
+      onClick={handleAdmin}
+    >
+      {roles && (
+        <p className="justify-self-end">
+          {roles[4].name}
+        </p>
+      )}
+    </li>
+
+    <li
+      className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF] cursor-pointer"
+      onClick={handleContributor}
+    >
+      {roles && (
+        <p className="justify-self-end">
+          {roles[5].name}
+        </p>
+      )}
+    </li>
+  </ul>
+)}
+</div> */
+}
+
+{
+  /* <div className="relative">
+<input
+  className="text-transparent w-[375px] h-[40px] border border-[#DCDCE4] rounded outline-none"
+  value={selects}
+  onChange={(e) => setSelects(e.target.value)}
+/>
+<div className="absolute flex items-center justify-center gap-[4.8px] top-[12px] left-[332px]">
+  <button className="" onClick={handleCancelRole}>
+    <img
+      src={clear}
+      alt="clear"
+      className="w-2.5 h-2.5"
+    />
+  </button>
+  <button className="" onClick={handleRoles}>
+    <img src={caret} alt="caret" className="w-4 h-4" />
+  </button>
+</div>
+
+<div className="flex absolute top-[1px] left-[1px]">
+  {adminOn && (
+    <SuperAdmin
+      setAdminOn={setAdminOn}
+      text={selects}
+    />
+  )}
+
+  {contributorOn && (
+    <Contributor setContributorOn={setContributorOn} />
+  )}
+</div>
+
+{rolesOn && (
+  <ul
+    className="absolute z-10 flex flex-col items-center w-[140px] top-[40px] right-[437px] bg-white rounded"
+    style={{
+      boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.12)",
+    }}
+  >
+    <li
+      className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF] cursor-pointer"
+      onClick={handleAdmin}
+    >
+      {roles && (
+        <p className="justify-self-end">
+          {roles[4].name}
+        </p>
+      )}
+    </li>
+
+    <li
+      className="pl-[29px] py-3 flex font-medium text-sm w-full hover:bg-[#F5E4FF] cursor-pointer"
+      onClick={handleContributor}
+    >
+      {roles && (
+        <p className="justify-self-end">
+          {roles[5].name}
+        </p>
+      )}
+    </li>
+  </ul>
+)}
+</div> */
 }

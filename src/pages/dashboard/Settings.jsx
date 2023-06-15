@@ -1215,7 +1215,7 @@ export default function Settings() {
                 />
                 <div className="flex gap-2">
                   <p className="text-xs font-bold">All</p>
-                  <button className="p">
+                  <button className="">
                     <img src={arrowDown} alt="arrow down" className="w-4 h-4" />
                   </button>
                 </div>
