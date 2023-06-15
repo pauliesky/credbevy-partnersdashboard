@@ -40,10 +40,7 @@ export const logout = () => {
       }
 
       const data = await response.json();
-<<<<<<< HEAD
-=======
       console.log('logged out');
->>>>>>> 5c137b02d7dd00e0bf4264860ed9d193763ed965
       dispatch(logoutSuccess());
 
       console.log(response);
